@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Husets events</title>
+    <style>
+        /* Center the loader */
+        #loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            width: 150px;
+            height: 150px;
+            margin: -75px 0 0 -75px;
+            border: 16px solid #fff;
+            border-radius: 50%;
+            border-top: 16px solid #e50606;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Add animation to "page content" */
+        .animate-bottom {
+            position: relative;
+            animation-name: animatebottom;
+            animation-duration: 1s
+        }
+
+        @keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+
+        #myDiv {
+            display: none;
+            text-align: center;
+        }
+
+        .logo img {
+            margin-top: 10vw;
+            width: 50vw;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+    <div id="loader"></div>
+
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="logo"><img src="assets/Huset_logo_9_B.png" alt="Husets logo"></div>
+
+    </div>
+
+
+
+
+    <script>
+        let TO;
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            TO = setTimeout(showPage, 2000);
+        }
+
+
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
