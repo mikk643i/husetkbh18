@@ -58,8 +58,19 @@
         }
 
         .logo img {
-            margin-top: 10vw;
+            margin: 10vw;
             width: 50vw;
+        }
+
+        .data_img {
+            width: 85vw;
+        }
+
+        #data-page {
+            border: solid black 1px;
+            margin: 5px;
+            padding: 5px;
+            margin-top: 10px;
         }
     </style>
 
@@ -74,6 +85,23 @@
 
     <div style="display:none;" id="myDiv" class="animate-bottom">
         <div class="logo"><img src="assets/Huset_logo_9_B.png" alt="Husets logo"></div>
+        <h1>Kommende events</h1>
+        <section class="event">
+
+
+        </section>
+        <template id="wp_template">
+
+            <article id="data-page">
+                <h2 id="data-title"></h2>
+                <img class="data_img" src="">
+                <div class""></div>
+                <p class="data-genre"></p>
+                <p class="data-dato"></p>
+                <p class="data-sted"></p>
+                <p class="data-pris"></p>
+            </article>
+        </template>
 
     </div>
 
@@ -94,6 +122,44 @@
         function showPage() {
             document.getElementById("loader").style.display = "none";
             document.getElementById("myDiv").style.display = "block";
+        }
+
+        let minTemplate = document.querySelector("#wp_template");
+        let templateModtager = document.querySelector(".event");
+        let husetEvents
+
+        document.addEventListener("DOMContentLoaded", getJson);
+
+
+        async function getJson() {
+            let husetPost = await fetch("http://thejarisunderthebed.com/huset/wordpress/wordpress/wp-json/wp/v2/events");
+            husetEvents = await husetPost.json();
+            console.log(husetEvents);
+
+            VisPost();
+        }
+
+        function VisPost() {
+
+            husetEvents.forEach(husetevent => {
+                let klon = minTemplate.cloneNode("true").content;
+
+
+                klon.querySelector("#data-title").innerHTML = husetevent.title.rendered;
+                klon.querySelector(".data-genre").textContent = husetevent.acf.event_type;
+                klon.querySelector(".data_img").src = husetevent.acf.billede;
+                klon.querySelector(".data-dato").textContent = "Dato: " + husetevent.acf.dato;
+                klon.querySelector(".data-sted").textContent = husetevent.acf.sted;
+                klon.querySelector(".data-pris").textContent = "Entre " + husetevent.acf.pris + "kr";
+
+
+
+
+
+                templateModtager.appendChild(klon);
+            });
+
+
         }
     </script>
 </body>
