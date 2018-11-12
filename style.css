@@ -1,1 +1,533 @@
+      @font-face {
+          font-family: MyFirstFont;
+          src: url("../fonts/Avenir-Black.woff");
 
+      }
+
+      body {
+          background-color: #edf7fe;
+      }
+
+      h1 {
+          font-family: 'avenir', sans-serif;
+      }
+
+      h2 {
+          font-family: 'avenir', sans-serif;
+      }
+
+      h3 {
+          font-family: 'avenir', sans-serif;
+      }
+
+      h4 {
+          font-family: 'avenir', sans-serif;
+      }
+
+      h5 {
+          font-family: 'avenir', sans-serif;
+      }
+
+      h6 {
+          font-family: 'avenir', sans-serif;
+      }
+
+      p {
+          font-family: 'avenir', sans-serif;
+      }
+
+      li {
+          font-family: 'avenir', sans-serif;
+      }
+
+      strong {
+          font-family: 'avenir', sans-serif;
+      }
+
+      /*MENU OG BURGER MENU og site brede og noget til kontakt.html*/
+      @media screen and (max-width: 750px) {
+          .normal {
+              display: none;
+          }
+
+          header img {
+              width: 50vw;
+          }
+
+          .menubutton {
+              width: 2em;
+              height: 1.5em;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              justify-content: space-around;
+              align-items: center;
+              margin: 15px;
+              cursor: pointer;
+              position: relative;
+              z-index: 10;
+              margin-left: 300px;
+              margin-top: -30px
+          }
+
+          .bar {
+              width: 1.8em;
+              height: 4px;
+              background-color: #032846;
+              transition: transform .5s;
+          }
+
+
+
+          .kryds .bar1 {
+              transform: rotate(45deg) translate(8px, 3px);
+          }
+
+          .kryds .bar2 {
+              opacity: 0;
+          }
+
+          .kryds .bar3 {
+              transform: rotate(-45deg) translate(8px, -3px)
+          }
+
+
+          nav li {
+              margin-top: 40px;
+              margin-left: 50px;
+              margin-bottom: 40px;
+              color: rgba(201, 201, 201, 0);
+          }
+
+          nav a {
+              color: #fff;
+              font-size: 1.3em;
+              font-family: "Avenir-Black", sans-serif;
+              margin-left: -60px;
+              text-decoration: none;
+
+          }
+
+          nav {
+              position: absolute;
+              background-color: rgb(163, 163, 163);
+              width: 96%;
+              transform-origin: top;
+              transition: transform .5s;
+              z-index: 5;
+          }
+
+          .hidden {
+              display: block;
+              transform: translateY(-550px);
+          }
+
+          .site-brede {
+              margin-top: 3vw;
+              width: 90vw;
+          }
+
+          .site-brede img {
+              width: 90vw;
+              margin-top: 3vw;
+              margin-bottom: 3vw;
+          }
+
+          .kontakt img {
+              width: 95vw;
+          }
+
+          .kontakt img.kort {
+              width: 90vw;
+          }
+
+
+
+
+      }
+
+      @media screen and (min-width: 737px) {
+          .hidden {
+              display: none;
+          }
+
+          .menubutton {
+              display: none;
+          }
+
+
+
+          header img {
+              margin-left: 250px;
+              margin-top: 30px;
+              width: 30vw;
+              align-items: center;
+              padding-left: 20px
+          }
+
+          .normal {
+              display: flex;
+              flex-wrap: nowrap;
+              margin-left: 130px;
+              margin-top: 50px;
+
+          }
+
+          .normal a {
+              text-decoration: none;
+              color: black;
+              font-family: "Avenir-Black", sans-serif;
+              font-weight: normal;
+
+
+          }
+
+          .normal li {
+              float: left;
+              margin-left: 20px
+          }
+
+          .normal li a {
+              color: rgb(0, 0, 0);
+              display: block;
+              text-align: center;
+              padding: 5px 5px;
+              text-decoration: none;
+          }
+
+          .normal ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+          }
+
+          .normal a:hover {
+              background-color: lightgray;
+          }
+
+
+          .site-brede {
+              margin-top: 3vw;
+              width: 75vw;
+
+          }
+
+          .site-brede img {
+              width: 75vw;
+              margin-top: 3vw;
+              margin-bottom: 3vw;
+          }
+
+          .kontakt img {
+              width: 40vw;
+          }
+
+          .kontakt img.kort {
+              width: 90vw;
+          }
+
+      }
+
+      @media screen and (min-width: 1024px) {
+          .hidden {
+              display: none;
+          }
+
+          .menubutton {
+              display: none;
+          }
+
+
+          header img {
+              margin-left: 0px;
+              margin-top: 10px;
+              width: 30vw;
+              padding: 10px;
+              padding-left: 40px
+          }
+
+          .normal {
+              display: flex;
+              flex-wrap: nowrap;
+              margin-left: 360px;
+              margin-top: -35px;
+
+          }
+
+          .normal a {
+              font-size: 1.4em;
+              text-decoration: none;
+              color: black;
+              font-family: "Avenir-Black", sans-serif;
+              font-weight: normal;
+
+
+          }
+
+          .normal li {
+              float: left;
+              margin-left: 20px
+          }
+
+          .normal li a {
+              color: rgb(0, 0, 0);
+              display: block;
+              text-align: center;
+              padding: 5px 5px;
+              text-decoration: none;
+          }
+
+          .normal ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+          }
+
+          .normal a:hover {
+              background-color: lightgray;
+          }
+
+          .site-brede {
+              margin-top: 3vw;
+              margin-left: 4vw;
+              width: 90vw;
+          }
+
+          .site-brede img {
+              width: 90vw;
+              margin-top: 3vw;
+              margin-bottom: 3vw;
+          }
+
+          .kontakt img.kort {
+              width: 50vw;
+          }
+
+      }
+
+      @media screen and (min-width: 1366px) {
+          header img {
+              margin-left: 20px;
+          }
+
+          .normal {
+              margin-left: 700px
+          }
+
+          .kontakt img.kort {
+              width: 90vw;
+          }
+      }
+
+      @media screen and (min-width: 1500px) {
+          header img {
+              margin-left: 120px;
+          }
+
+          .normal {
+              margin-top: -35px;
+              margin-left: 740px
+          }
+
+          .site-brede {
+              margin-top: 3vw;
+              margin-left: 23vw;
+              width: 50vw;
+          }
+
+          .site-brede img {
+              width: 50vw;
+              margin-top: 3vw;
+              margin-bottom: 3vw;
+          }
+
+          .kontakt img {
+              width: 16vw;
+          }
+
+          .kontakt img.kort {
+              width: 50vw;
+          }
+      }
+
+
+
+
+
+      /*Event sitet style*/
+      @media screen and (max-width: 750px) {
+          .filtrering {
+              padding-top: 30px;
+              text-align: center;
+          }
+
+          .menu-item {
+              border: none;
+              background-color: #c6e3f8;
+              height: 30px;
+              width: 70px;
+              margin-right: 10px;
+          }
+
+          .animate-bottom {
+              position: relative;
+              animation-name: animatebottom;
+              animation-duration: 1s
+          }
+
+          @keyframes animatebottom {
+              from {
+                  bottom: -100px;
+                  opacity: 0
+              }
+
+              to {
+                  bottom: 0;
+                  opacity: 1
+              }
+          }
+
+          #myDiv {
+              display: none;
+              text-align: center;
+          }
+
+          .data_img {
+              width: 80vw;
+          }
+
+          #data-page {
+              text-align: center;
+              width: 80vw;
+              background-color: #c6e3f8;
+              padding: 10px;
+              margin-top: 20px;
+              font-family: Avenir-Black;
+          }
+
+          .event {
+              display: grid;
+              width: 34vw;
+              margin-top: 10vw;
+              padding-left: 4%;
+              padding-right: 5%;
+              grid-gap: 20px;
+              grid-template-columns: repeat(1, 1fr);
+
+          }
+
+          .events h1 {
+              text-align: center;
+
+          }
+
+          .kob-billet {
+              position: absolute;
+              width: 30%;
+
+          }
+
+      }
+
+
+      @media screen and (min-width: 737px) {
+          .events h1 {
+              margin-top: 10%;
+              text-align: center;
+          }
+
+          .filtrering {
+              padding-top: 30px;
+              text-align: center;
+          }
+
+          .menu-item {
+              border: none;
+              background-color: #c6e3f8;
+              height: 30px;
+              width: 70px;
+              margin-right: 10px;
+          }
+
+          .data_img {
+              width: 40vw;
+          }
+
+          #data-page {
+              text-align: center;
+              width: 40vw;
+              background-color: #c6e3f8;
+              padding: 10px;
+              margin-top: 20px;
+              font-family: Avenir-Black;
+          }
+
+          .event {
+              display: grid;
+              width: 40vw;
+              margin-top: 10vw;
+              padding-left: 4%;
+              padding-right: 5%;
+              grid-gap: 20px;
+              grid-template-columns: repeat(2, 1fr);
+
+          }
+
+          .kob-billet {
+              position: absolute;
+              width: 17%;
+
+          }
+      }
+
+
+      @media screen and (min-width: 1500px) {
+          .filtrering {
+              padding-top: 30px;
+              text-align: center;
+          }
+
+          .menu-item {
+              border: none;
+              background-color: #c6e3f8;
+              height: 30px;
+              width: 100px;
+              margin-right: 10px;
+          }
+
+          .events h1 {
+              margin-top: 5%;
+              margin-left: -25px;
+              text-align: center;
+          }
+
+          .event {
+              margin-top: 5%;
+              display: grid;
+              padding-left: 10.5%;
+              padding-right: 5%;
+              grid-gap: 20px;
+              grid-template-columns: repeat(3, 1fr);
+          }
+
+          .data_img {
+              width: 23.2vw;
+          }
+
+          #data-page {
+              text-align: center;
+              width: 23.2vw;
+              background-color: #c6e3f8;
+              padding: 10px;
+              margin-top: 5px;
+              font-family: Avenir-Black;
+          }
+
+          .kob-billet {
+              position: absolute;
+              width: 8%;
+
+          }
+      }
