@@ -7,49 +7,93 @@
     <title>Bliv frivillig</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .minimenu-container {
-            display: flex;
-            grid-template-columns: repeat(5, 1fr);
-            grid-gap: 10px;
+        @media screen and (max-width: 750px) {
+            .minimenu-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 10px;
+            }
+
+            .box {
+                margin-left: 10px;
+                text-align: center;
+                width: 160px;
+                height: 160px;
+                background-color: #c6e3f8;
+            }
+
+            .box img {
+                margin-top: 65px;
+                text-align: center;
+                width: 100px;
+            }
+
+            .box2 img {
+                margin-top: 50px;
+            }
+
+            .box3 img {
+                margin-top: 47px;
+            }
+
+            .box4 img {
+                margin-top: 64px;
+                width: 120px;
+            }
+
+            .box5 img {
+                width: 40px;
+                margin-top: 55px;
+            }
+
         }
 
-        .box {
-            text-align: center;
-            margin-right: 20px;
-            width: 134px;
-            height: 134px;
-            background-color: #c6e3f8;
+
+        @media screen and (min-width: 1500px) {
+            .minimenu-container {
+                display: flex;
+                grid-template-columns: repeat(5, 1fr);
+                grid-gap: 10px;
+            }
+
+            .box {
+                text-align: center;
+                margin-right: 20px;
+                width: 134px;
+                height: 134px;
+                background-color: #c6e3f8;
+
+            }
+
+            .box img {
+                margin-top: 50px;
+                text-align: center;
+                width: 90px;
+            }
+
+            .box2 img {
+                margin-top: 40px;
+            }
+
+            .box3 img {
+                margin-top: 40px;
+            }
+
+            .box4 img {
+                margin-top: 58px;
+                width: 120px;
+            }
+
+            .box5 img {
+                width: 40px;
+                margin-top: 45px;
+            }
+
+            .box:hover {
+                background-color: #9ec9e8;
+            }
 
         }
-
-        .box img {
-            margin-top: 50px;
-            text-align: center;
-            width: 90px;
-        }
-
-        .box2 img {
-            margin-top: 40px;
-        }
-
-        .box3 img {
-            margin-top: 40px;
-        }
-
-        .box4 img {
-            margin-top: 58px;
-            width: 120px;
-        }
-
-        .box5 img {
-            width: 40px;
-            margin-top: 45px;
-        }
-
-        .box:hover {
-            background-color: #9ec9e8;
-        }
-
     </style>
 </head>
 
