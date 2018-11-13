@@ -58,73 +58,102 @@
     </template>
 
 
+    <!-- Nyhedsbrev -->
+    <button id="tilmeld">
+        <p>Vær en del af fælleskabet!</p>
+    </button>
 
 
-    <script src="javascript.js"></script>
-    <script>
-        let minTemplate = document.querySelector("#wp_template");
-        let templateModtager = document.querySelector(".event");
-        let husetEvents;
-        let eventFilter = "Alle"
-        let dest = document.querySelector(".event");
+    <section id="modal">
 
-        /* Filtrering af events */
+        <button id="close">Luk</button>
 
-        document.addEventListener("DOMContentLoaded", getJson);
-        eventFilter = "Alle";
-        document.querySelectorAll(".menu-item").forEach(knap => {
-            knap.addEventListener("click", filtrering)
-        });
+        <div id="modal-content">
+            <form>
+                <h1>Læs vores nyhedsbrev!</h1>
+                <p>Vores nyhedsbrev indeholder information omkring kommende begivender og sammenkomster i Huset, der
+                    vil også være hyppige konkurrencer og andet tilbud kun modtagere af nyhedsbrevet vil modtage. </p>
+                <input id="navn" type="text" name="navn" placeholder="Navn" required>
+                <input id="email" type="text" name="email" placeholder="E-mail" required><br>
 
-        function filtrering() {
-            dest.textContent = "";
-            /*console.log(this.getAttribute("data-genre"));*/
+                <p> Ved at klikke send, erklærer du dig enig med vores politik om persondata <a href="https://huset-kbh.dk/kontakt-huset-kbh-kontakt-huset/persondata/">læs
+                        om det her</a> </p>
 
-            // dest er distination som skal vise indholdet
-            eventFilter = this.getAttribute("data-genre");
-            VisPost();
-        }
-
-        document.addEventListener("DOMContentLoaded", getJson);
-        async function getJson() {
-            let husetPost = await fetch("http://thejarisunderthebed.com/huset/wordpress/wordpress/wp-json/wp/v2/events");
-            husetEvents = await husetPost.json();
-            console.log(husetEvents);
-
-            VisPost();
-        }
-
-        /*viser alle events når man lander på siden og filtere når der klikkes andre genre*/
-        function VisPost() {
-            console.log(eventFilter);
-            husetEvents.forEach(husetevent => {
-
-                if (eventFilter == "Alle" || eventFilter == husetevent.acf.event_type) {
-
-                    let klon = minTemplate.cloneNode("true").content;
-                    /*klon.querySelector("img").src = husetevent.acf.billede;
-                    klon.querySelector("img").addEventListener("click", () => {
-                    visModal(husetevent);
-                    });*/
+                <input type="submit" value="send"> <span id="response"> </span> <br>
 
 
-                    klon.querySelector("#data-title").innerHTML = husetevent.title.rendered;
-                    klon.querySelector(".data-genre").textContent = husetevent.acf.event_type;
-                    klon.querySelector(".data_img").src = husetevent.acf.billede;
-                    klon.querySelector(".data-dato").textContent = "Dato: " + husetevent.acf.dato;
-                    klon.querySelector(".data-sted").textContent = husetevent.acf.sted;
-                    klon.querySelector(".data-pris").textContent = "Entre " + husetevent.acf.pris + "kr"
+            </form>
+        </div>
 
 
-                    templateModtager.appendChild(klon);
-                } else {
 
 
-                }
-            })
-        }
+        <script src="javascript.js"></script>
+        <script>
+            let minTemplate = document.querySelector("#wp_template");
+            let templateModtager = document.querySelector(".event");
+            let husetEvents;
+            let eventFilter = "Alle"
+            let dest = document.querySelector(".event");
 
-        /*function visModal(husetevent) {
+            /* Filtrering af events */
+
+            document.addEventListener("DOMContentLoaded", getJson);
+            eventFilter = "Alle";
+            document.querySelectorAll(".menu-item").forEach(knap => {
+                knap.addEventListener("click", filtrering)
+            });
+
+            function filtrering() {
+                dest.textContent = "";
+                /*console.log(this.getAttribute("data-genre"));*/
+
+                // dest er distination som skal vise indholdet
+                eventFilter = this.getAttribute("data-genre");
+                VisPost();
+            }
+
+            document.addEventListener("DOMContentLoaded", getJson);
+            async function getJson() {
+                let husetPost = await fetch(
+                    "http://thejarisunderthebed.com/huset/wordpress/wordpress/wp-json/wp/v2/events");
+                husetEvents = await husetPost.json();
+                console.log(husetEvents);
+
+                VisPost();
+            }
+
+            /*viser alle events når man lander på siden og filtere når der klikkes andre genre*/
+            function VisPost() {
+                console.log(eventFilter);
+                husetEvents.forEach(husetevent => {
+
+                    if (eventFilter == "Alle" || eventFilter == husetevent.acf.event_type) {
+
+                        let klon = minTemplate.cloneNode("true").content;
+                        /*klon.querySelector("img").src = husetevent.acf.billede;
+                        klon.querySelector("img").addEventListener("click", () => {
+                        visModal(husetevent);
+                        });*/
+
+
+                        klon.querySelector("#data-title").innerHTML = husetevent.title.rendered;
+                        klon.querySelector(".data-genre").textContent = husetevent.acf.event_type;
+                        klon.querySelector(".data_img").src = husetevent.acf.billede;
+                        klon.querySelector(".data-dato").textContent = "Dato: " + husetevent.acf.dato;
+                        klon.querySelector(".data-sted").textContent = husetevent.acf.sted;
+                        klon.querySelector(".data-pris").textContent = "Entre " + husetevent.acf.pris + "kr"
+
+
+                        templateModtager.appendChild(klon);
+                    } else {
+
+
+                    }
+                })
+            }
+
+            /*function visModal(husetevent) {
             modal.classList.add("vis");
             modal.querySelector(".modal-navn").innerHTML = husetevent.title.rendered;
             modal.querySelector(".modal-billede").src = husetevent.acf.billede;
@@ -141,7 +170,51 @@
 
         }
 */
-    </script>
+
+            //Nyhedsbrev
+
+            let modal = document.querySelector("#modal");
+            let tilmeld = document.querySelector("#tilmeld");
+            let close = document.querySelector("#close");
+
+
+            let svartekst = "";
+            document.querySelector("form").addEventListener("submit", ajaxCall);
+
+
+            async function ajaxCall(e) {
+                e.preventDefault();
+                let navn = this.querySelector("input[name=navn]").value;
+                let email = this.querySelector("input[name=email]").value;
+                let url = "form_nyhedsbrev.php?navn=" + navn + "&email=" + email;
+                let svar = await fetch(url);
+                svartekst = await svar.text();
+                show();
+                this.querySelector("input[name=navn]").value = "";
+                this.querySelector("input[name=email]").value = "";
+            }
+
+            function show(response) {
+                document.querySelector("#response").textContent = svartekst;
+            }
+
+            tilmeld.addEventListener("click", visModal);
+
+            function visModal() {
+
+
+                modal.classList.add("vis");
+
+
+                close.addEventListener("click", skjulModal);
+
+            }
+
+            function skjulModal() {
+
+                modal.classList.remove("vis");
+            }
+        </script>
 </body>
 
 </html>
