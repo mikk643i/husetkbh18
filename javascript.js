@@ -1,10 +1,8 @@
-
-
 document.addEventListener("DOMContentLoaded", sidenVises);
 
 function sidenVises() {
     console.log("sidenVises");
-    document.querySelector(".menubutton").addEventListener ("click", trykPaaMenubutton)
+    document.querySelector(".menubutton").addEventListener("click", trykPaaMenubutton)
 }
 
 function trykPaaMenubutton() {
@@ -14,5 +12,3 @@ function trykPaaMenubutton() {
     document.querySelector(".menubutton").classList.toggle("kryds")
 
 }
-
-
