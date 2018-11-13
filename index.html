@@ -79,7 +79,7 @@
                 <p> Ved at klikke send, erklærer du dig enig med vores politik om persondata <a href="https://huset-kbh.dk/kontakt-huset-kbh-kontakt-huset/persondata/">læs
                         om det her</a> </p>
 
-                <input type="submit" value="send"> <span id="response"> </span> <br>
+                <input type="submit" value="Send"> <span id="response"> </span> <br>
 
 
             </form>
@@ -186,7 +186,7 @@
                 e.preventDefault();
                 let navn = this.querySelector("input[name=navn]").value;
                 let email = this.querySelector("input[name=email]").value;
-                let url = "form_nyhedsbrev.php?navn=" + navn + "&email=" + email;
+                let url = "formNyhedsbrev.php?navn=" + navn + "&email=" + email;
                 let svar = await fetch(url);
                 svartekst = await svar.text();
                 show();
