@@ -1,6 +1,12 @@
       @font-face {
           font-family: MyFirstFont;
-          src: url("../fonts/Avenir-Black.woff");
+          src: url("../fonts/Avenir-book.woff");
+
+      }
+
+      @font-face {
+          font-family: MyFirstFont1;
+          src: url("../fonts/HUSET.woff");
 
       }
 
@@ -9,39 +15,47 @@
       }
 
       h1 {
-          font-family: 'avenir', sans-serif;
+          font-family: MyFirstfont1;
+          text-transform: uppercase;
+          font-size: 3em;
+          text-align: center;
       }
 
       h2 {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
       }
 
       h3 {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
       }
 
       h4 {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
       }
 
       h5 {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
       }
 
       h6 {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
       }
 
       p {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
       }
 
       li {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
       }
 
       strong {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
+      }
+
+      a {
+          font-family: 'avenir-book', sans-serif;
+          color: black;
       }
 
       /*MENU OG BURGER MENU og site brede og noget til kontakt.html*/
@@ -603,5 +617,167 @@
               position: absolute;
               width: 8%;
 
+          }
+      }
+
+
+      /* Nyhedsbrev */
+
+      #tilmeld {
+          font-family: Avenir-Black;
+          background-color: #ffffff;
+          width: 18vh;
+          height: auto;
+          border-radius: 3.5px;
+          border: none;
+          text-align: center;
+          position: fixed;
+          right: 1vw;
+          bottom: 1vw;
+          z-index: 100;
+          cursor: pointer;
+      }
+
+      #tilmeld p {
+          color: black;
+          font-weight: bold;
+          font-family: Avenir-Black;
+      }
+
+
+
+      #modal.vis {
+          opacity: 1;
+          pointer-events: all;
+          border-radius: 10px;
+      }
+
+
+
+      #close {
+          height: 20px;
+          width: 50px;
+          border-radius: 3.5px;
+          border: none;
+          background-color: #ffffff;
+          color: black;
+          margin: 3px;
+      }
+
+
+
+      #close:hover,
+      #close:focus {
+          color: #26225c;
+          text-decoration: none;
+          cursor: pointer;
+          margin: 5px;
+      }
+
+
+
+
+      #modal {
+          background-color: white;
+          opacity: 0;
+          pointer-events: none;
+          transition: all 1s;
+          position: fixed;
+          z-index: 300;
+          padding: 30px;
+          box-shadow: 2px 2px 30px black;
+          font-family: Avenir-Black;
+
+      }
+
+
+
+      #modal-content {
+          margin: 5px;
+      }
+
+
+
+      input[type=submit] {
+          width: 50px;
+          height: 25px;
+          background-color: #ededed;
+          color: black;
+          font-size: 15px;
+          text-align: center;
+          margin: 5px;
+          border-radius: 3.5px;
+          float: right;
+      }
+
+
+
+      input[type=email]:hover {
+          background-color: white;
+          border-radius: 3.5px;
+      }
+
+
+
+      input[type=text]:hover {
+
+          background-color: white;
+          border-radius: 3.5px;
+      }
+
+
+
+
+
+      input {
+          border-radius: 3.5px;
+          margin: 5px;
+      }
+
+      @media screen and (min-width: 400px) {
+          #modal {
+              right: 2vw;
+              top: 75vw;
+              width: 80vw;
+              height: 90vw;
+          }
+      }
+
+
+      @media screen and (min-width: 525px) {
+          #modal {
+              width: 70vw;
+              height: 64vw;
+              right: 2vw;
+              top: 61.5vw;
+          }
+      }
+
+      @media screen and (min-width: 750px) {
+          #modal {
+              width: 60vw;
+              height: 43vw;
+              right: 2vw;
+              top: 44vw;
+          }
+      }
+
+      @media screen and (min-width: 1075px) {
+          #modal {
+              width: 48vw;
+              height: 30vw;
+              right: 1.8vw;
+              top: 30.5vw;
+          }
+      }
+
+
+
+      @media screen and (min-width: 1440px) {
+          #modal {
+              width: 20vw;
+              height: 30vw;
+              right: 2vw;
+              top: 14.5vw;
           }
       }
