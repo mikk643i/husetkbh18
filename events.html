@@ -53,7 +53,6 @@
             height: 50px;
             border-radius: 50px;
         }*/
-
     </style>
 </head>
 
@@ -141,8 +140,85 @@
     <script>
         /*Globale variabler*/
 
+        let minTemplate = document.querySelector("#wp_template");
+        let templateModtager = document.querySelector(".event");
+        let husetEvents;
+        let eventFilter = "Alle"
+        let dest = document.querySelector(".event");
+
+        /* Filtrering af events */
+
+        document.addEventListener("DOMContentLoaded", getJson);
+        eventFilter = "Alle";
+        document.querySelectorAll(".menu-item").forEach(knap => {
+            knap.addEventListener("click", filtrering)
+        });
+
+        function filtrering() {
+            dest.textContent = "";
+            /*console.log(this.getAttribute("data-genre"));*/
+
+            // dest er distination som skal vise indholdet
+            eventFilter = this.getAttribute("data-genre");
+            VisPost();
+        }
+
+        document.addEventListener("DOMContentLoaded", getJson);
+        async function getJson() {
+            let husetPost = await fetch("http://thejarisunderthebed.com/huset/wordpress/wordpress/wp-json/wp/v2/events");
+            husetEvents = await husetPost.json();
+            console.log(husetEvents);
+
+            VisPost();
+        }
+
+        /*viser alle events når man lander på siden og filtere når der klikkes andre genre*/
+        function VisPost() {
+            console.log(eventFilter);
+            husetEvents.forEach(husetevent => {
+
+                if (eventFilter == "Alle" || eventFilter == husetevent.acf.event_type) {
+
+                    let klon = minTemplate.cloneNode("true").content;
+                    /*klon.querySelector("img").src = husetevent.acf.billede;
+                    klon.querySelector("img").addEventListener("click", () => {
+                    visModal(husetevent);
+                    });*/
 
 
+                    klon.querySelector("#data-title").innerHTML = husetevent.title.rendered;
+                    klon.querySelector(".data-genre").textContent = husetevent.acf.event_type;
+                    klon.querySelector(".data_img").src = husetevent.acf.billede;
+                    klon.querySelector(".data-dato").textContent = "Dato: " + husetevent.acf.dato;
+                    klon.querySelector(".data-sted").textContent = husetevent.acf.sted;
+                    klon.querySelector(".data-pris").textContent = "Entre " + husetevent.acf.pris + "kr"
+
+
+                    templateModtager.appendChild(klon);
+                } else {
+
+
+                }
+            })
+        }
+
+        /*function visModal(husetevent) {
+            modal.classList.add("vis");
+            modal.querySelector(".modal-navn").innerHTML = husetevent.title.rendered;
+            modal.querySelector(".modal-billede").src = husetevent.acf.billede;
+            modal.querySelector(".data-genre").textContent = husetevent.acf.event_type;
+            modal.querySelector(".data-lang-beskrivelse").textContent = husetevent.acf.lang_beskrivelse;
+            modal.querySelector(".data-sted").textContent = husetevent.acf.event_sted;
+            modal.querySelector(".data-pris").textContent = "Entre " + husetevent.acf.pris + "kr"
+            modal.querySelector("button").addEventListener("click", skjulModal);
+        }
+
+        function skjulModal() {
+            modal.classList.remove("vis");
+
+
+        }
+*/
     </script>
 
 </body>
