@@ -9,51 +9,69 @@
     <style>
         @media screen and (max-width: 750px) {
             .minimenu-container {
+                margin-left: 10px;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-gap: 10px;
             }
 
             .box {
-                margin-left: 10px;
+
                 text-align: center;
                 width: 160px;
                 height: 160px;
-                background-color: #c6e3f8;
+
             }
 
             .box img {
-                margin-top: 65px;
+                margin-top: 0px;
                 text-align: center;
-                width: 100px;
-            }
-
-            .box2 img {
-                margin-top: 50px;
-            }
-
-            .box3 img {
-                margin-top: 47px;
-            }
-
-            .box4 img {
-                margin-top: 64px;
-                width: 120px;
-            }
-
-            .box5 img {
-                width: 40px;
-                margin-top: 55px;
+                width: 155px;
             }
 
         }
 
+        @media screen and (min-width: 737px) {
+            .minimenu-container {
+                margin-left: -10px;
+                width: vw;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+
+            }
+
+            .minimenu-container img {
+                width: 10vw;
+                margin-top: -1vw;
+            }
+
+
+            .box {
+
+                text-align: center;
+                width: 150px;
+                height: 150px;
+
+            }
+
+            .box img {
+                margin-top: -1vw;
+                text-align: center;
+                width: 110px;
+            }
+        }
 
         @media screen and (min-width: 1500px) {
             .minimenu-container {
-                display: flex;
+                margin-left: 0px;
+                display: grid;
                 grid-template-columns: repeat(5, 1fr);
                 grid-gap: 10px;
+            }
+
+            .minimenu-container img {
+                width: 10vw;
+                margin-top: -1vw;
             }
 
             .box {
@@ -61,37 +79,9 @@
                 margin-right: 20px;
                 width: 134px;
                 height: 134px;
-                background-color: #c6e3f8;
-
             }
 
-            .box img {
-                margin-top: 50px;
-                text-align: center;
-                width: 90px;
-            }
 
-            .box2 img {
-                margin-top: 40px;
-            }
-
-            .box3 img {
-                margin-top: 40px;
-            }
-
-            .box4 img {
-                margin-top: 58px;
-                width: 120px;
-            }
-
-            .box5 img {
-                width: 40px;
-                margin-top: 45px;
-            }
-
-            .box:hover {
-                background-color: #9ec9e8;
-            }
 
         }
     </style>
@@ -191,11 +181,11 @@
         <h3>Hvilken slags frivillig er du?</h3>
         <br>
         <div class="minimenu-container">
-            <div class="box box1"><a href="#frivillig-type-huset"><img src="mobil/assets/huset_icon.png" alt="icon til husets frivilligteam"></a></div>
-            <div class="box box2"><a href="#frivillig-type-teater"><img src="mobil/assets/teater-icon.png" alt="icon til huset teater frivillige"></a></div>
-            <div class="box box3"><a href="#frivillig-type-bastard"><img src="mobil/assets/bastard-icon.png" alt="icon til husets bastard cafe frivillig guru"></a></div>
-            <div class="box box4"><a href="#frivillig-type-biograf"><img src="mobil/assets/biograf-icon.png" alt="icon til husets biograf frivilllig"></a></div>
-            <div class="box box5"><a href="#frivillig-type-kamera"><img src="mobil/assets/kamera-icon.png" alt="icon til husets frivillige fotografer"></a></div>
+            <div class="box"><a href="#frivillig-type-huset"><img src="mobil/assets/huset_icon.png" alt="icon til husets frivilligteam"></a></div>
+            <div class="box"><a href="#frivillig-type-teater"><img src="mobil/assets/teater-icon.png" alt="icon til huset teater frivillige"></a></div>
+            <div class="box"><a href="#frivillig-type-bastard"><img src="mobil/assets/bastard-icon.png" alt="icon til husets bastard cafe frivillig guru"></a></div>
+            <div class="box"><a href="#frivillig-type-biograf"><img src="mobil/assets/biograf-icon.png" alt="icon til husets biograf frivilllig"></a></div>
+            <div class="box"><a href="#frivillig-type-kamera"><img src="mobil/assets/kamera-icon.png" alt="icon til husets frivillige fotografer"></a></div>
         </div>
 
 

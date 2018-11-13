@@ -1,6 +1,6 @@
       @font-face {
           font-family: MyFirstFont;
-          src: url("../fonts/Avenir-book.woff");
+          src: url("../fonts/Avenir-Book.woff");
 
       }
 
@@ -17,49 +17,71 @@
       h1 {
           font-family: MyFirstfont1;
           text-transform: uppercase;
-          font-size: 3em;
+          font-size: 3.5em;
           text-align: center;
       }
 
       h2 {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       h3 {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       h4 {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       h5 {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       h6 {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       p {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       li {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       strong {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       a {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
           color: black;
       }
 
       /*MENU OG BURGER MENU og site brede og noget til kontakt.html*/
       @media screen and (max-width: 750px) {
+
+          .frivilligbox {
+              width: 90vw
+          }
+
+          .txt_frivillig {
+              padding: 10px;
+              margin-bottom: 30px;
+              margin-right: 10px;
+              width: 85vw;
+              background-color: #c6e3f8;
+          }
+
+          .readmore a {
+              text-decoration: none;
+          }
+
+
+          .video_frivillig ifreme {
+              width: 85vw;
+          }
+
           .normal {
               display: none;
           }
@@ -178,7 +200,7 @@
           display: none;
           position: absolute;
           background-color: #a3c3d9;
-          width: 200px;
+          width: 190px;
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           padding: 12px 16px;
           z-index: 1;
@@ -191,6 +213,31 @@
 
 
       @media screen and (min-width: 737px) {
+          .frivilligbox {
+              display: grid;
+              grid-template-columns: repeat(1, 1fr);
+              width: 90vw;
+          }
+
+          .txt_frivillig {
+              margin: 20px;
+              padding: 30px;
+              background-color: #c6e3f8;
+              width: 70vw;
+          }
+
+          iframe {
+              width: 70vw;
+              height: 40vw;
+              margin-left: 7vw;
+          }
+
+
+          .readmore a {
+              text-decoration: none;
+          }
+
+
           .hidden {
               display: none;
           }
@@ -254,12 +301,17 @@
 
           .site-brede {
               margin-top: 3vw;
-              width: 75vw;
+              width: 90vw;
 
           }
 
+          .site-brede h1 {
+              text-align: center;
+              margin-left: 55px;
+          }
+
           .site-brede img {
-              width: 75vw;
+              width: 98vw;
               margin-top: 3vw;
               margin-bottom: 3vw;
           }
@@ -269,12 +321,34 @@
           }
 
           .kontakt img.kort {
-              width: 90vw;
+              width: 98vw;
           }
 
       }
 
       @media screen and (min-width: 1024px) {
+          .frivilligbox {
+
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              width: 90vw;
+          }
+
+          .txt_frivillig {
+              margin: 20px;
+              padding: 30px;
+              background-color: #c6e3f8;
+              width: 35vw;
+          }
+
+          .readmore a {
+
+              text-decoration: none;
+          }
+
+
+
+
           .hidden {
               display: none;
           }
@@ -353,6 +427,28 @@
       }
 
       @media screen and (min-width: 1366px) {
+          .frivilligbox {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              width: 90vw;
+          }
+
+          .txt_frivillig {
+              margin: 20px;
+              padding: 30px;
+              background-color: #c6e3f8;
+              width: 35vw;
+          }
+
+
+
+
+          .readmore a {
+
+              text-decoration: none;
+          }
+
+
           header img {
               margin-left: 20px;
           }
@@ -367,6 +463,28 @@
       }
 
       @media screen and (min-width: 1500px) {
+          .frivilligbox {
+
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              width: 90vw;
+          }
+
+
+
+          .txt_frivillig {
+              margin: 20px;
+              padding: 30px;
+              background-color: #c6e3f8;
+              width: 35vw;
+          }
+
+          .readmore a {
+
+              text-decoration: none;
+          }
+
+
           header img {
               margin-left: 120px;
           }
@@ -395,8 +513,14 @@
           .kontakt img.kort {
               width: 50vw;
           }
-      }
 
+          iframe {
+              margin-top: 20px;
+              width: 34vw;
+              height: 17.7vw;
+              margin-left: -51px;
+          }
+      }
 
 
 
@@ -404,7 +528,7 @@
       /*Event sitet style*/
       @media screen and (max-width: 750px) {
           .filtrering {
-              padding-top: 30px;
+              padding-top: 10px;
               text-align: center;
           }
 
@@ -463,10 +587,7 @@
 
           }
 
-          .events h1 {
-              text-align: center;
 
-          }
 
           .kob-billet {
               position: absolute;
@@ -478,13 +599,10 @@
 
 
       @media screen and (min-width: 737px) {
-          .events h1 {
-              margin-top: 10%;
-              text-align: center;
-          }
+
 
           .filtrering {
-              padding-top: 30px;
+              padding-top: 10px;
               text-align: center;
           }
 
@@ -530,7 +648,7 @@
 
       @media screen and (min-width: 1500px) {
           .filtrering {
-              padding-top: 30px;
+              padding-top: 10px;
               text-align: center;
           }
 
@@ -542,14 +660,10 @@
               margin-right: 10px;
           }
 
-          .events h1 {
-              margin-top: 5%;
-              margin-left: -25px;
-              text-align: center;
-          }
+
 
           .event {
-              margin-top: 5%;
+              margin-top: 2%;
               display: grid;
               padding-left: 10.5%;
               padding-right: 5%;
