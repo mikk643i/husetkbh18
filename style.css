@@ -1,6 +1,6 @@
       @font-face {
           font-family: MyFirstFont;
-          src: url("../fonts/Avenir-book.woff");
+          src: url("../fonts/Avenir-Book.woff");
 
       }
 
@@ -22,39 +22,39 @@
       }
 
       h2 {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       h3 {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       h4 {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       h5 {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       h6 {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       p {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       li {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       strong {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
       }
 
       a {
-          font-family: 'avenir-book', sans-serif;
+          font-family: 'Avenir-Book', sans-serif;
           color: black;
       }
 
@@ -447,7 +447,7 @@
       /*Event sitet style*/
       @media screen and (max-width: 750px) {
           .filtrering {
-              padding-top: 30px;
+              padding-top: 10px;
               text-align: center;
           }
 
@@ -506,10 +506,7 @@
 
           }
 
-          .events h1 {
-              text-align: center;
 
-          }
 
           .kob-billet {
               position: absolute;
@@ -521,13 +518,10 @@
 
 
       @media screen and (min-width: 737px) {
-          .events h1 {
-              margin-top: 10%;
-              text-align: center;
-          }
+
 
           .filtrering {
-              padding-top: 30px;
+              padding-top: 10px;
               text-align: center;
           }
 
@@ -573,7 +567,7 @@
 
       @media screen and (min-width: 1500px) {
           .filtrering {
-              padding-top: 30px;
+              padding-top: 10px;
               text-align: center;
           }
 
@@ -585,11 +579,7 @@
               margin-right: 10px;
           }
 
-          .events h1 {
-              margin-top: 5%;
-              margin-left: -25px;
-              text-align: center;
-          }
+
 
           .event {
               margin-top: 5%;
