@@ -1,6 +1,12 @@
       @font-face {
           font-family: MyFirstFont;
-          src: url("../fonts/Avenir-Black.woff");
+          src: url("../fonts/Avenir-book.woff");
+
+      }
+
+      @font-face {
+          font-family: MyFirstFont1;
+          src: url("../fonts/HUSET.woff");
 
       }
 
@@ -9,39 +15,47 @@
       }
 
       h1 {
-          font-family: 'avenir', sans-serif;
+          font-family: MyFirstfont1;
+          text-transform: uppercase;
+          font-size: 3em;
+          text-align: center;
       }
 
       h2 {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
       }
 
       h3 {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
       }
 
       h4 {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
       }
 
       h5 {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
       }
 
       h6 {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
       }
 
       p {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
       }
 
       li {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
       }
 
       strong {
-          font-family: 'avenir', sans-serif;
+          font-family: 'avenir-book', sans-serif;
+      }
+
+      a {
+          font-family: 'avenir-book', sans-serif;
+          color: black;
       }
 
       /*MENU OG BURGER MENU og site brede og noget til kontakt.html*/
