@@ -640,7 +640,7 @@
 
           .kob-billet {
               position: absolute;
-              width: 17%;
+              width: 13%;
 
           }
       }
@@ -998,6 +998,7 @@
               left: -33px;
           }
       }
+
 
 
       .historieKnap button {

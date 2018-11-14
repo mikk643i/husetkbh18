@@ -12,249 +12,10 @@
     <link rel="apple-touch-icon" sizes="192x192" href="../app-icons/Icon-192.png">
     <link rel="apple-touch-icon" sizes="144x144" href="../app-icons/Icon-144.png">
 
-
-    <title>Husets events</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Nyheder</title>
     <style>
-        @font-face {
-            font-family: MyFirstFont;
-            src: url("../fonts/Avenir-Book.woff");
 
-        }
-
-
-        /* Center the loader */
-
-        #loader {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            z-index: 1;
-            width: 150px;
-            height: 150px;
-            margin: -75px 0 0 -75px;
-            border: 16px solid #fff;
-            border-radius: 50%;
-            border-top: 16px solid #e50606;
-            width: 120px;
-            height: 120px;
-            animation: spin 2s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* Add animation to "page content" */
-
-        .animate-bottom {
-            position: relative;
-            animation-name: animatebottom;
-            animation-duration: 1s
-        }
-
-        @keyframes animatebottom {
-            from {
-                bottom: -100px;
-                opacity: 0
-            }
-
-            to {
-                bottom: 0;
-                opacity: 1
-            }
-        }
-
-        #myDiv {
-            display: none;
-            text-align: center;
-        }
-
-        .logo img {
-            margin: 10vw;
-            width: 50vw;
-        }
-
-        .data_img {
-            width: 85vw;
-        }
-
-        #data-page {
-            border: solid black 1px;
-            margin: 5px;
-            padding: 5px;
-            margin-top: 10px;
-            font-family: Avenir-Black;
-        }
-
-
-        /* Nyhedsbrev */
-
-      /* Nyhedsbrev */
-
-      #tilmeld {
-          font-family: Avenir-Black;
-          background-color: #ffffff;
-          width: 18vh;
-          height: auto;
-          border-radius: 3.5px;
-          border: none;
-          text-align: center;
-          position: fixed;
-          right: 1vw;
-          bottom: 1vw;
-          z-index: 100;
-          cursor: pointer;
-      }
-
-      #tilmeld p {
-          color: black;
-          font-weight: bold;
-          font-family: Avenir-Black;
-      }
-
-
-
-      #modal.vis {
-          opacity: 1;
-          pointer-events: all;
-          border-radius: 10px;
-      }
-
-
-
-      #close {
-          height: 20px;
-          width: 50px;
-          border-radius: 3.5px;
-          border: none;
-          background-color: #ffffff;
-          color: black;
-          margin: 3px;
-      }
-
-
-
-      #close:hover,
-      #close:focus {
-          color: #26225c;
-          text-decoration: none;
-          cursor: pointer;
-          margin: 5px;
-      }
-
-
-
-
-      #modal {
-          background-color: white;
-          opacity: 0;
-          pointer-events: none;
-          transition: all 1s;
-          position: fixed;
-          z-index: 300;
-          padding: 30px;
-          box-shadow: 2px 2px 30px black;
-          font-family: Avenir-Black;
-
-      }
-
-
-
-      #modal-content {
-          margin: 5px;
-      }
-
-
-
-      input[type=submit] {
-          width: 50px;
-          height: 25px;
-          background-color: #ededed;
-          color: black;
-          font-size: 15px;
-          text-align: center;
-          margin: 5px;
-          border-radius: 3.5px;
-          float: right;
-      }
-
-
-
-      input[type=email]:hover {
-          background-color: white;
-          border-radius: 3.5px;
-      }
-
-
-
-      input[type=text]:hover {
-
-          background-color: white;
-          border-radius: 3.5px;
-      }
-
-
-
-
-
-      input {
-          border-radius: 3.5px;
-          margin: 5px;
-      }
-
-      @media screen and (min-width: 400px) {
-          #modal {
-              right: 2vw;
-              top: 75vw;
-              width: 80vw;
-              height: 90vw;
-          }
-      }
-
-
-      @media screen and (min-width: 525px) {
-          #modal {
-              width: 70vw;
-              height: 64vw;
-              right: 2vw;
-              top: 61.5vw;
-          }
-      }
-
-      @media screen and (min-width: 750px) {
-          #modal {
-              width: 60vw;
-              height: 43vw;
-              right: 2vw;
-              top: 44vw;
-          }
-      }
-
-      @media screen and (min-width: 1075px) {
-          #modal {
-              width: 48vw;
-              height: 30vw;
-              right: 1.8vw;
-              top: 30.5vw;
-          }
-      }
-
-
-
-      @media screen and (min-width: 1440px) {
-          #modal {
-              width: 20vw;
-              height: 30vw;
-              right: 2vw;
-              top: 14.5vw;
-          }
-      }
     </style>
 
 
@@ -262,13 +23,25 @@
 
 <body>
 
-
-
     <div id="loader"></div>
-
     <div style="display:none;" id="myDiv" class="animate-bottom">
+
+
         <div class="logo"><img src="assets/Huset_logo_9_B.png" alt="Husets logo"></div>
-        <h1>Kommende events</h1>
+
+        <div class="menu">
+
+            <div class="home"> <a href="index.html"><img src="/mobil/assets/home.png" alt="hjemme"></a></div>
+
+            <div class="events"> <a href="events.html"><img src="/mobil/assets/events.png" alt="events"></a></div>
+
+            <div class="kontaktos"><a href="kontakt.html"><img src="/mobil/assets/kontakt.png" alt="kontakt"></a></div>
+        </div>
+
+        <div class="site-brede">
+            <h1>Nyheder</h1>
+        </div>
+
         <section class="event">
 
 
@@ -276,148 +49,74 @@
         <template id="wp_template">
 
             <article id="data-page">
-                <h2 id="data-title"></h2>
+
+
                 <img class="data_img" src="">
-                <div class""></div>
-                <p class="data-genre"></p>
-                <p class="data-dato"></p>
-                <p class="data-sted"></p>
-                <p class="data-pris"></p>
+
+                <h2 id="data-title"></h2>
+                <p class="data-content"></p>
+
             </article>
         </template>
 
+
     </div>
+    <script>
+        let TO;
 
-    <!-- Nyhedsbrev -->
-    <button id="tilmeld">
-        <p>Vær en del af fælleskabet!</p>
-    </button>
+        document.addEventListener("DOMContentLoaded", start);
 
-
-    <section id="modal">
-
-        <button id="close">Luk</button>
-
-        <div id="modal-content">
-            <form>
-                <h1>Læs vores nyhedsbrev!</h1>
-                <p>Vores nyhedsbrev indeholder information omkring kommende begivender og sammenkomster i Huset, der
-                    vil også være hyppige konkurrencer og andet tilbud kun modtagere af nyhedsbrevet vil modtage. </p>
-                <input id="navn" type="text" name="navn" placeholder="Navn" required>
-                <input id="email" type="text" name="email" placeholder="E-mail" required><br>
-
-                <p> Ved at klikke send, erklærer du dig enig med vores politik om persondata <a href="https://huset-kbh.dk/kontakt-huset-kbh-kontakt-huset/persondata/">læs
-                        om det her</a> </p>
-
-                <input type="submit" value="send"> <span id="response"> </span> <br>
-
-
-            </form>
-        </div>
+        function start() {
+            TO = setTimeout(showPage, 2000);
+        }
 
 
 
-
-        <script>
-            let TO;
-
-            document.addEventListener("DOMContentLoaded", start);
-
-            function start() {
-                TO = setTimeout(showPage, 2000);
-            }
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
 
 
+        let minTemplate = document.querySelector("#wp_template");
+        let templateModtager = document.querySelector(".event");
+        let husetEvents
 
-            function showPage() {
-                document.getElementById("loader").style.display = "none";
-                document.getElementById("myDiv").style.display = "block";
-            }
-
-            let minTemplate = document.querySelector("#wp_template");
-            let templateModtager = document.querySelector(".event");
-            let husetEvents
-
-            document.addEventListener("DOMContentLoaded", getJson);
+        document.addEventListener("DOMContentLoaded", getJson);
 
 
-            async function getJson() {
-                let husetPost = await fetch(
-                    "http://thejarisunderthebed.com/huset/wordpress/wordpress/wp-json/wp/v2/events");
-                husetEvents = await husetPost.json();
-                console.log(husetEvents);
+        async function getJson() {
+            let husetPost = await fetch(
+                "http://thejarisunderthebed.com/huset/wordpress/wordpress/wp-json/wp/v2/nyheder");
+            husetEvents = await husetPost.json();
+            console.log(husetEvents);
 
-                VisPost();
-            }
+            VisPost();
+        }
 
-            function VisPost() {
+        function VisPost() {
 
-                husetEvents.forEach(husetevent => {
-                    let klon = minTemplate.cloneNode("true").content;
+            husetEvents.forEach(husetevent => {
+                let klon = minTemplate.cloneNode("true").content;
 
 
-                    klon.querySelector("#data-title").innerHTML = husetevent.title.rendered;
-                    klon.querySelector(".data-genre").textContent = husetevent.acf.event_type;
-                    klon.querySelector(".data_img").src = husetevent.acf.billede;
-                    klon.querySelector(".data-dato").textContent = "Dato: " + husetevent.acf.dato;
-                    klon.querySelector(".data-sted").textContent = husetevent.acf.sted;
-                    klon.querySelector(".data-pris").textContent = "Entre " + husetevent.acf.pris + "kr";
+                klon.querySelector("#data-title").innerHTML = husetevent.title.rendered;
+
+
+                klon.querySelector(".data-content").innerHTML = husetevent.content.rendered;
 
 
 
 
 
-                    templateModtager.appendChild(klon);
-                });
 
 
-            }
+                templateModtager.appendChild(klon);
+            });
 
 
-            //Nyhedsbrev
+        }
+    </script>
 
-            let modal = document.querySelector("#modal");
-            let tilmeld = document.querySelector("#tilmeld");
-            let close = document.querySelector("#close");
-
-
-            let svartekst = "";
-            document.querySelector("form").addEventListener("submit", ajaxCall);
-
-
-            async function ajaxCall(e) {
-                e.preventDefault();
-                let navn = this.querySelector("input[name=navn]").value;
-                let email = this.querySelector("input[name=email]").value;
-                let url = "form_nyhedsbrev.php?navn=" + navn + "&email=" + email;
-                let svar = await fetch(url);
-                svartekst = await svar.text();
-                show();
-                this.querySelector("input[name=navn]").value = "";
-                this.querySelector("input[name=email]").value = "";
-            }
-
-            function show(response) {
-                document.querySelector("#response").textContent = svartekst;
-            }
-
-            tilmeld.addEventListener("click", visModal);
-
-            function visModal() {
-
-
-                modal.classList.add("vis");
-
-
-                close.addEventListener("click", skjulModal);
-
-            }
-
-            function skjulModal() {
-
-                modal.classList.remove("vis");
-            }
-        </script>
 </body>
-
 </html>

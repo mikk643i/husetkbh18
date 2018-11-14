@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="start_url" content="/huset/mobil">
+    <meta name="apple-mobile-web-app-title" content="HUSET KBH">
+    <link rel="apple-touch-icon" sizes="192x192" href="../app-icons/Icon-192.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../app-icons/Icon-144.png">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Husets events</title>
+    <style>
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+    <div class="logo"><img src="assets/Huset_logo_9_B.png" alt="Husets logo"></div>
+
+    <div class="menu">
+
+        <div class="home"> <a href="index.html"><img src="/mobil/assets/home.png" alt="hjemme"></a></div>
+
+        <div class="events"> <a href="events.html"><img src="/mobil/assets/events.png" alt="events"></a></div>
+
+        <div class="kontaktos"><a href="kontakt.html"><img src="/mobil/assets/kontakt.png" alt="kontakt"></a></div>
+    </div>
+
+
+    <h1>Kommende events</h1>
+    <section class="event">
+
+
+    </section>
+    <template id="wp_template">
+
+        <article id="data-page">
+
+            <img class="kob-billet" src="/mobil/assets/kob-billet.png" alt="køb billet">
+            <img class="data_img" src="">
+
+            <h2 id="data-title"></h2>
+            <p class="data-genre"></p>
+            <p class="data-dato"></p>
+            <p class="data-sted"></p>
+            <p class="data-pris"></p>
+        </article>
+    </template>
+
+
+
+
+
+
+
+
+    <script>
+        let minTemplate = document.querySelector("#wp_template");
+        let templateModtager = document.querySelector(".event");
+        let husetEvents
+
+        document.addEventListener("DOMContentLoaded", getJson);
+
+
+        async function getJson() {
+            let husetPost = await fetch(
+                "http://thejarisunderthebed.com/huset/wordpress/wordpress/wp-json/wp/v2/events");
+            husetEvents = await husetPost.json();
+            console.log(husetEvents);
+
+            VisPost();
+        }
+
+        function VisPost() {
+
+            husetEvents.forEach(husetevent => {
+                let klon = minTemplate.cloneNode("true").content;
+
+
+                klon.querySelector("#data-title").innerHTML = husetevent.title.rendered;
+                klon.querySelector(".data-genre").textContent = husetevent.acf.event_type;
+                klon.querySelector(".data_img").src = husetevent.acf.billede;
+                klon.querySelector(".data-dato").textContent = "Dato: " + husetevent.acf.dato;
+                klon.querySelector(".data-sted").textContent = husetevent.acf.sted;
+                klon.querySelector(".data-pris").textContent = "Entre: " + husetevent.acf.pris + " kr.";
+
+
+
+
+
+                templateModtager.appendChild(klon);
+            });
+
+
+        }
+    </script>
+
+</body>
+
+</html>
