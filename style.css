@@ -943,7 +943,7 @@
           background: #a3c3d9;
           position: absolute;
           top: 0px;
-          width: 38px;
+          width: 42px;
           height: 5px;
       }
 
@@ -954,11 +954,11 @@
       }
 
       .timeline ul li:nth-child(odd) .content:before {
-          left: -38px;
+          left: -36px;
       }
 
       .timeline ul li:nth-child(even) .content {
-          left: calc(-450px - 45px);
+          left: calc(-450px - 85px);
           background: #a3c3d9;
       }
 
