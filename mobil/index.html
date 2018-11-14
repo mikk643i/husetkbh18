@@ -38,7 +38,26 @@
             <div class="kontaktos"><a href="kontakt.html"><img src="/mobil/assets/kontakt.png" alt="kontakt"></a></div>
         </div>
 
+        <div class="site-brede">
+            <h1>Nyheder</h1>
+        </div>
 
+        <section class="event">
+
+
+        </section>
+        <template id="wp_template">
+
+            <article id="data-page">
+
+
+                <img class="data_img" src="">
+
+                <h2 id="data-title"></h2>
+                <p class="data-content"></p>
+
+            </article>
+        </template>
 
 
     </div>
@@ -56,6 +75,46 @@
         function showPage() {
             document.getElementById("loader").style.display = "none";
             document.getElementById("myDiv").style.display = "block";
+        }
+
+
+        let minTemplate = document.querySelector("#wp_template");
+        let templateModtager = document.querySelector(".event");
+        let husetEvents
+
+        document.addEventListener("DOMContentLoaded", getJson);
+
+
+        async function getJson() {
+            let husetPost = await fetch(
+                "http://thejarisunderthebed.com/huset/wordpress/wordpress/wp-json/wp/v2/nyheder");
+            husetEvents = await husetPost.json();
+            console.log(husetEvents);
+
+            VisPost();
+        }
+
+        function VisPost() {
+
+            husetEvents.forEach(husetevent => {
+                let klon = minTemplate.cloneNode("true").content;
+
+
+                klon.querySelector("#data-title").innerHTML = husetevent.title.rendered;
+
+
+                klon.querySelector(".data-content").innerHTML = husetevent.content.rendered;
+
+
+
+
+
+
+
+                templateModtager.appendChild(klon);
+            });
+
+
         }
     </script>
 

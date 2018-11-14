@@ -239,8 +239,14 @@
      }
  }
 
- .site-brede {
+ .site-hoj {
      margin-left: 4px;
      margin-right: 4px;
-     margin-bottom: 60px;
+     margin-bottom: 70px;
+ }
+
+
+ .event {
+     margin-bottom: 70px;
+
  }
