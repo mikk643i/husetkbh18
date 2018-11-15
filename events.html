@@ -53,7 +53,6 @@
             height: 50px;
             border-radius: 50px;
         }*/
-
     </style>
 </head>
 
@@ -77,16 +76,16 @@
                         <li><a href="general.html">General husorden</a></li>
                         <li><a href="historie.html">Historie</a></li>
                     </ul>
-                <li class="dropdown"><a href="kontakt.html">Kontakt</a>
-                    <ul class="dropdown-content">
-                        <li><a href="medarbejder.html">Medarbejder</a></li>
-                        <li><a href="ledig.html">Ledige stillinger</a></li>
-                        <li><a href="booker.html">Booking</a></li>
-                        <li><a href="udlejning.html">Udlejning</a></li>
-                        <li><a href="presse.html">Presse</a></li>
-                        <li><a href="Personlig-data.html">Persondata</a></li>
+                    <li class="dropdown"><a href="kontakt.html">Kontakt</a>
+                        <ul class="dropdown-content">
+                            <li><a href="medarbejder.html">Medarbejder</a></li>
+                            <li><a href="ledig.html">Ledige stillinger</a></li>
+                            <li><a href="booker.html">Booking</a></li>
+                            <li><a href="udlejning.html">Udlejning</a></li>
+                            <li><a href="presse.html">Presse</a></li>
+                            <li><a href="Personlig-data.html">Persondata</a></li>
 
-                    </ul>
+                        </ul>
             </ul>
 
         </nav>
@@ -103,16 +102,16 @@
                         <li><a href="general.html">General husorden</a></li>
                         <li><a href="historie.html">Historie</a></li>
                     </ul>
-                <li class="dropdown"><a href="kontakt.html">Kontakt</a>
-                    <ul class="dropdown-content">
-                        <li><a href="medarbejder.html">Medarbejder</a></li>
-                        <li><a href="ledig.html">Ledige stillinger</a></li>
-                        <li><a href="booker.html">Booking</a></li>
-                        <li><a href="udlejning.html">Udlejning</a></li>
-                        <li><a href="presse.html">Presse</a></li>
-                        <li><a href="Personlig-data.html">Persondata</a></li>
+                    <li class="dropdown"><a href="kontakt.html">Kontakt</a>
+                        <ul class="dropdown-content">
+                            <li><a href="medarbejder.html">Medarbejder</a></li>
+                            <li><a href="ledig.html">Ledige stillinger</a></li>
+                            <li><a href="booker.html">Booking</a></li>
+                            <li><a href="udlejning.html">Udlejning</a></li>
+                            <li><a href="presse.html">Presse</a></li>
+                            <li><a href="Personlig-data.html">Persondata</a></li>
 
-                    </ul>
+                        </ul>
             </ul>
         </nav>
     </header>
@@ -128,6 +127,22 @@
             <button class="menu-item" data-genre="Musik">Musik</button>
             <a href="kalender.html"><button class="menu-item">Kalender</button></a>
         </div>
+
+        <section id="modal_event">
+
+            <div id="modal-content">
+                <h2 class="modal-title"></h2>
+                <p class="modal-genre" data-genre></p>
+
+                <p class="modal-sted" data-sted></p>
+                <img class="modal-billede" src="" alt="">
+                <p class="modal-langbeskrivelse" data-lang-beskrivelse></p>
+                <p>Pris: <span class="modal-pris" data-pris></span>,- </p>
+                <span class="data-dato" data-dato></span>
+            </div>
+        </section>
+
+
 
         <section class="event">
         </section>
@@ -184,7 +199,6 @@
 
         /*viser alle events når man lander på siden og filtere når der klikkes andre genre*/
         function VisPost() {
-            console.log(eventFilter);
             husetEvents.forEach(husetevent => {
 
                 if (eventFilter == "Alle" || eventFilter == husetevent.acf.event_type) {
@@ -199,6 +213,9 @@
                     klon.querySelector("#data-title").innerHTML = husetevent.title.rendered;
                     klon.querySelector(".data-genre").textContent = husetevent.acf.event_type;
                     klon.querySelector(".data_img").src = husetevent.acf.billede;
+                    klon.querySelector(".data_img").addEventListener("click", () => {
+                        visEventModal(husetevent);
+                    });
                     klon.querySelector(".data-dato").textContent = "Dato: " + husetevent.acf.dato;
                     klon.querySelector(".data-sted").textContent = husetevent.acf.sted;
                     klon.querySelector(".data-pris").textContent = "Entre: " + husetevent.acf.pris + " kr."
@@ -212,24 +229,29 @@
             })
         }
 
-        /*function visModal(husetevent) {
-            modal.classList.add("vis");
-            modal.querySelector(".modal-navn").innerHTML = husetevent.title.rendered;
+
+
+
+
+
+
+        function visEventModal(husetevent) {
+            let modal = document.querySelector("#modal_event");
+            modal.querySelector(".modal-title").innerHTML = husetevent.title.rendered;
             modal.querySelector(".modal-billede").src = husetevent.acf.billede;
-            modal.querySelector(".data-genre").textContent = husetevent.acf.event_type;
-            modal.querySelector(".data-lang-beskrivelse").textContent = husetevent.acf.lang_beskrivelse;
-            modal.querySelector(".data-sted").textContent = husetevent.acf.event_sted;
-            modal.querySelector(".data-pris").textContent = "Entre " + husetevent.acf.pris + "kr"
-            modal.querySelector("button").addEventListener("click", skjulModal);
+            modal.querySelector(".modal-genre").textContent = husetevent.acf.event_type;
+            modal.querySelector(".modal-langbeskrivelse").textContent = husetevent.acf.lang_beskrivelse;
+            modal.querySelector(".modal-sted").textContent = husetevent.acf.event_sted;
+            modal.querySelector(".modal-pris").textContent = "Entre " + husetevent.acf.pris + "kr"
+
+            document.getElementById("modal_event").style.opacity = "1";
         }
 
         function skjulModal() {
-            modal.classList.remove("vis");
+            visEventModal.classList.remove("vis");
 
 
         }
-*/
-
     </script>
 
 </body>
