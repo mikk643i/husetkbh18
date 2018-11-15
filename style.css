@@ -719,7 +719,11 @@
 
 
 
-
+      #modal.vis {
+          opacity: 1;
+          pointer-events: all;
+          border-radius: 10px;
+      }
 
 
 
@@ -746,11 +750,12 @@
 
 
 
-      #modal_event {
+      #modal {
           background-color: white;
           opacity: 0;
           pointer-events: none;
           transition: all 1s;
+          position: fixed;
           z-index: 300;
           padding: 30px;
           box-shadow: 2px 2px 30px black;
@@ -849,8 +854,6 @@
               top: 14.5vw;
           }
       }
-
-
 
       .timeline {
           color: #fff;
@@ -1007,11 +1010,16 @@
       }
 
       #mere,
-      #toggle_1,
-      #toggle_2,
-      #toggle_3,
-      #toggle_4,
-      #toggle_5 {
+      #frivillig_toggle_1,
+      #frivillig_toggle_2,
+      #frivillig_toggle_3,
+      #frivillig_toggle_4,
+      #frivillig_toggle_5,
+      #udlejning_toggle_1,
+      #udlejning_toggle_2,
+      #udlejning_toggle_3,
+      #udlejning_toggle_4,
+      #udlejning_toggle_5 {
           display: none;
       }
 
@@ -1021,3 +1029,6 @@
           transform: scale(1.05);
 
       }
+
+
+      /*MODAL WINDOW*/
