@@ -24,53 +24,99 @@
 <body>
 
 
+    <div id="loader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
 
 
-    <div class="logo"><img src="assets/Huset_logo_9_B.png" alt="Husets logo"></div>
+        <div class="logo"><img src="assets/Huset_logo_9_B.png" alt="Husets logo"></div>
 
-    <div class="menu">
+        <div class="menu">
 
-        <div class="home"> <a href="index.html"><img src="/mobil/assets/home.png" alt="hjemme"></a></div>
+            <div class="home"> <a href="index.html"><img src="/mobil/assets/home.png" alt="hjemme"></a></div>
 
-        <div class="events"> <a href="events.html"><img src="/mobil/assets/events.png" alt="events"></a></div>
+            <div class="events"> <a href="events.html"><img src="/mobil/assets/events.png" alt="events"></a></div>
 
-        <div class="kontaktos"><a href="kontakt.html"><img src="/mobil/assets/kontakt.png" alt="kontakt"></a></div>
+            <div class="kontaktos"><a href="kontakt.html"><img src="/mobil/assets/kontakt.png" alt="kontakt"></a></div>
+        </div>
+
+
+        <h1>Kommende events</h1>
+        <div class="events">
+
+            <div class="filtrering">
+                <button class="menu-item" data-genre="Alle">Alle Events</button>
+                <button class="menu-item" data-genre="Film">Film</button>
+                <button class="menu-item" data-genre="Teater">Teater</button>
+                <button class="menu-item" data-genre="Musik">Musik</button>
+
+            </div>
+
+            <section class="event">
+
+
+            </section>
+            <template id="wp_template">
+
+                <article id="data-page">
+
+                    <img class="kob-billet" src="/mobil/assets/kob-billet.png" alt="køb billet">
+                    <img class="data_img" src="">
+
+                    <h2 id="data-title"></h2>
+                    <p class="data-genre"></p>
+                    <p class="data-dato"></p>
+                    <p class="data-sted"></p>
+                    <p class="data-pris"></p>
+                </article>
+            </template>
+
+
+
+
+        </div>
+
     </div>
 
-
-    <h1>Kommende events</h1>
-    <section class="event">
-
-
-    </section>
-    <template id="wp_template">
-
-        <article id="data-page">
-
-            <img class="kob-billet" src="/mobil/assets/kob-billet.png" alt="køb billet">
-            <img class="data_img" src="">
-
-            <h2 id="data-title"></h2>
-            <p class="data-genre"></p>
-            <p class="data-dato"></p>
-            <p class="data-sted"></p>
-            <p class="data-pris"></p>
-        </article>
-    </template>
-
-
-
-
-
-
-
-
     <script>
+        let TO;
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            TO = setTimeout(showPage, 1000);
+        }
+
+
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+
+
         let minTemplate = document.querySelector("#wp_template");
         let templateModtager = document.querySelector(".event");
         let husetEvents
+        let eventFilter = "Alle";
+        let dest = document.querySelector(".event");
+        document.addEventListener("DOMContentLoaded", getJson);
+
+        /* Filtrering af events */
 
         document.addEventListener("DOMContentLoaded", getJson);
+        eventFilter = "Alle";
+        document.querySelectorAll(".menu-item").forEach(knap => {
+            knap.addEventListener("click", filtrering)
+        });
+
+        function filtrering() {
+            dest.textContent = "";
+
+
+
+            eventFilter = this.getAttribute("data-genre");
+            VisPost();
+        }
 
 
         async function getJson() {
@@ -85,26 +131,30 @@
         function VisPost() {
 
             husetEvents.forEach(husetevent => {
-                let klon = minTemplate.cloneNode("true").content;
+                if (eventFilter == "Alle" || eventFilter == husetevent.acf.event_type) {
+
+                    let klon = minTemplate.cloneNode("true").content;
 
 
-                klon.querySelector("#data-title").innerHTML = husetevent.title.rendered;
-                klon.querySelector(".data-genre").textContent = husetevent.acf.event_type;
-                klon.querySelector(".data_img").src = husetevent.acf.billede;
+                    klon.querySelector("#data-title").innerHTML = husetevent.title.rendered;
+                    klon.querySelector(".data-genre").textContent = husetevent.acf.event_type;
+                    klon.querySelector(".data_img").src = husetevent.acf.billede;
 
-                klon.querySelector("#data-page").addEventListener("click", () => {
-                    window.location.href = "single.html?id=" + husetevent.id;
-                });
+                    klon.querySelector("#data-page").addEventListener("click", () => {
+                        window.location.href = "single.html?id=" + husetevent.id;
+                    });
 
-                klon.querySelector(".data-dato").textContent = "Dato: " + husetevent.acf.dato;
-                klon.querySelector(".data-sted").textContent = husetevent.acf.sted;
-                klon.querySelector(".data-pris").textContent = "Entre: " + husetevent.acf.pris + " kr.";
-
-
+                    klon.querySelector(".data-dato").textContent = "Dato: " + husetevent.acf.dato;
+                    klon.querySelector(".data-sted").textContent = husetevent.acf.sted;
+                    klon.querySelector(".data-pris").textContent = "Entre: " + husetevent.acf.pris + " kr.";
 
 
 
-                templateModtager.appendChild(klon);
+
+
+                    templateModtager.appendChild(klon);
+                } else {}
+
             });
 
 
