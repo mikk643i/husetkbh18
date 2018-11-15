@@ -59,6 +59,7 @@
       }
 
       /*MENU OG BURGER MENU og site brede og noget til kontakt.html*/
+
       @media screen and (max-width: 750px) {
 
           .frivilligbox {
@@ -526,6 +527,7 @@
 
 
       /*Event sitet style*/
+
       @media screen and (max-width: 750px) {
           .filtrering {
               padding-top: 10px;
@@ -717,11 +719,7 @@
 
 
 
-      #modal.vis {
-          opacity: 1;
-          pointer-events: all;
-          border-radius: 10px;
-      }
+
 
 
 
@@ -748,12 +746,11 @@
 
 
 
-      #modal {
+      #modal_event {
           background-color: white;
           opacity: 0;
           pointer-events: none;
           transition: all 1s;
-          position: fixed;
           z-index: 300;
           padding: 30px;
           box-shadow: 2px 2px 30px black;
@@ -852,16 +849,6 @@
               top: 14.5vw;
           }
       }
-
-
-      /* *,
-      *::before,
-      *::after {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-      } */
-
 
 
 
@@ -963,7 +950,7 @@
       }
 
       .timeline ul li:nth-child(even) .content:before {
-          right: -38px;
+          right: -36px;
       }
 
       @media screen and (max-width: 1020px) {
@@ -1017,4 +1004,20 @@
           bottom: 1vw;
           z-index: 100;
           cursor: pointer;
+      }
+
+      #mere,
+      #toggle_1,
+      #toggle_2,
+      #toggle_3,
+      #toggle_4,
+      #toggle_5 {
+          display: none;
+      }
+
+
+      .minimenu-container img:hover {
+          opacity: 0.5;
+          transform: scale(1.05);
+
       }
