@@ -13,6 +13,22 @@ function trykPaaMenubutton() {
 
 }
 
+function hvisMere() {
+    var x = document.getElementById("mere");
+
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+    /* document.getElementById("toggle_1").style.display = "block";
+    document.getElementById("toggle_2").style.display = "none";
+    document.getElementById("toggle_3").style.display = "none";
+    document.getElementById("toggle_4").style.display = "none";
+    document.getElementById("toggle_5").style.display = "none"; */
+    window.scrollTo(0, document.body.scrollHeight);
+}
+
 function myFunction_1() {
     var x = document.getElementById("toggle_1");
 

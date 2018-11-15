@@ -74,16 +74,6 @@
     </header>
 
 
-    <section id="modal">
-        <button>X</button>
-        <div id="modal-content">
-            <h2 class="modal-navn"></h2>
-            <img class="modal-billede" src="" alt="">
-            <p class="modal-lang_beskrivelse" data-lang_beskrivelse></p>
-            <p>Pris: <span class="pris" data-pris></span>,- </p>
-        </div>
-    </section>
-
 
 
 
@@ -151,11 +141,11 @@
     </button>
 
 
-    <section id="nyhedsbrevModal">
+    <section id="modal">
 
         <button id="close">Luk</button>
 
-        <div id="nyhedsbrevModal-content">
+        <div id="modal-content">
             <form>
                 <h1>Læs vores nyhedsbrev!</h1>
                 <p>Vores nyhedsbrev indeholder information omkring kommende begivender og sammenkomster i Huset, der
@@ -177,8 +167,6 @@
 
     <script src="javascript.js"></script>
     <script>
-        let modal = document.querySelector("#modal");
-        let modal = document.querySelector("#nyhedsbrevModal");
         let minTemplate = document.querySelector("#wp_template");
         let templateModtager = document.querySelector(".event");
         let husetEvents;
@@ -242,9 +230,28 @@
             })
         }
 
+        /*function visModal(husetevent) {
+                modal.classList.add("vis");
+                modal.querySelector(".modal-navn").innerHTML = husetevent.title.rendered;
+                modal.querySelector(".modal-billede").src = husetevent.acf.billede;
+                modal.querySelector(".data-genre").textContent = husetevent.acf.event_type;
+                modal.querySelector(".data-lang-beskrivelse").textContent = husetevent.acf.lang_beskrivelse;
+                modal.querySelector(".data-sted").textContent = husetevent.acf.event_sted;
+                modal.querySelector(".data-pris").textContent = "Entre " + husetevent.acf.pris + "kr"
+                modal.querySelector("button").addEventListener("click", skjulModal);
+            }
+    
+            function skjulModal() {
+                modal.classList.remove("vis");
+    
+    
+            }
+    */
+
+
         //Nyhedsbrev
 
-
+        let modal = document.querySelector("#modal");
         let tilmeld = document.querySelector("#tilmeld");
         let close = document.querySelector("#close");
 
@@ -267,6 +274,23 @@
 
         function show(response) {
             document.querySelector("#response").textContent = svartekst;
+        }
+
+        tilmeld.addEventListener("click", visModal);
+
+        function visModal() {
+
+
+            modal.classList.add("vis");
+
+
+            close.addEventListener("click", skjulModal);
+
+        }
+
+        function skjulModal() {
+
+            modal.classList.remove("vis");
         }
     </script>
 
