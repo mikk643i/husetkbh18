@@ -854,16 +854,6 @@
       }
 
 
-      /* *,
-      *::before,
-      *::after {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-      } */
-
-
-
 
       .timeline {
           color: #fff;
@@ -963,7 +953,7 @@
       }
 
       .timeline ul li:nth-child(even) .content:before {
-          right: -38px;
+          right: -36px;
       }
 
       @media screen and (max-width: 1020px) {
@@ -1017,4 +1007,20 @@
           bottom: 1vw;
           z-index: 100;
           cursor: pointer;
+      }
+
+      #mere,
+      #toggle_1,
+      #toggle_2,
+      #toggle_3,
+      #toggle_4,
+      #toggle_5 {
+          display: none;
+      }
+
+
+      .minimenu-container img:hover {
+          opacity: 0.5;
+          transform: scale(1.05);
+
       }
