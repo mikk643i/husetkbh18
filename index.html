@@ -8,6 +8,123 @@
     <link rel="stylesheet" href="style.css">
     <style>
 
+        footer p{
+            font-size: 0.8em;
+        }
+
+        footer {
+            background-color: #a3c3d9;
+        }
+
+
+         @media screen and (max-width: 750px) {
+
+
+        .footer-container {
+            padding-top: 10px;
+           display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 1px;
+            width: 90vw;
+        }
+
+        .kontaktinfo{
+            width: 90vw;
+        }
+
+        .kontaktinfo {
+            line-height: 20px;
+        }
+
+        .aabningstider{
+
+            width: 90vw;
+        }
+
+        .aabningstider a:hover{
+            color: red;
+        }
+        .links{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 90vw;
+
+        }
+
+        .links a {
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .links a:hover {
+            color: red;
+        }
+
+        .site-brede {
+margin-top: 3vw;
+margin-left: 11.5vw;
+width: 75.5vw;
+        }
+        }
+
+        @media screen and (min-width: 1500px) {
+
+
+
+
+
+
+        .footer-container {
+            padding-top: 10px;
+           display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1px;
+            width: 70vw;
+        }
+
+        .kontaktinfo{
+            text-align: right;
+            width: 25vw;
+        }
+
+        .kontaktinfo {
+            line-height: 20px;
+        }
+
+        .aabningstider{
+            text-align: center;
+            width: 25vw;
+        }
+
+        .aabningstider a:hover{
+            color: red;
+        }
+        .links{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 25vw;
+
+        }
+
+        .links a {
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .links a:hover {
+            color: red;
+        }
+
+        .site-brede {
+margin-top: 3vw;
+margin-left: 11.5vw;
+width: 75.5vw;
+        }
+        }
     </style>
 </head>
 
@@ -163,7 +280,49 @@
         </div>
 
     </section>
+    <footer>
+        <div class="site-brede">
+            <div class="footer-container">
+                <div class="links">
 
+                    <a href="frivillig.html">Bliv frivillig</a>
+                    <a href="udlejning.html">Booking af lokale</a>
+                    <a href="events.html">Event kalender</a>
+                    <a href="presse.html">Presse og logo</a>
+                </div>
+
+                <div class="aabningstider">
+
+                    <p><b>Åbningstider</b><br>
+                        Huset-KBH har varierende åbningstider. <br>
+                        Se åbningstider for de enkelte events i <a href="events">kalenderen</a></p>
+
+
+
+                    <p><b>Åbningstider for Husets Reception </b><br>
+                        Hverdage 11.00-15.00 <br></p>
+
+
+
+                    <p><b>Bastard Café</b><br>
+                        Mandag-torsdag: 12.00-00.00 <br>
+                        Fredag-lørdag: 12.00-02.00 <br>
+                        Søndag: 12.00-00.00 <br>
+                        <br>
+                        Se mere på <a href="http://bastardcafe.dk/">bastard caféens hjemmeside</a></p>
+                </div>
+
+                <div class="kontaktinfo">
+                    <p><b>HUSET-KBH</b>
+                        <br>
+                        <br>Rådhusstræde 13
+                        <br>1466 København K
+                        <br>Tlf: 21 51 21 51
+                        <br>info@huset-kbh.dk</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="javascript.js"></script>
     <script>
