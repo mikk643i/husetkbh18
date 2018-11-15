@@ -58,6 +58,9 @@
      color: black;
  }
 
+ span {
+     font-family: 'Avenir-Book', sans-serif;
+ }
 
  /* Center the loader */
 
@@ -128,6 +131,11 @@
      margin-top: 10px;
      font-family: Avenir-Black;
      background-color: #c6e3f8;
+
+ }
+
+ #data-page img {
+     margin-left: 10px;
  }
 
 
@@ -237,6 +245,10 @@
          width: 80vw;
          margin-left: 45px;
      }
+
+     #data-page img {
+         margin-left: 35px;
+     }
  }
 
  .site-hoj {
@@ -249,4 +261,31 @@
  .event {
      margin-bottom: 70px;
 
+ }
+
+ @media screen and (min-height: 700px) {
+     .site-hoj {
+         margin-left: 4px;
+         margin-right: 4px;
+         margin-bottom: 70px;
+     }
+
+     .menu {
+         margin-left: -8px;
+         position: fixed;
+         justify-content: space-around;
+         background-color: #a3c3d9;
+         width: 100%;
+         height: 8vh;
+         z-index: 5;
+         display: flex;
+         flex-direction: row;
+         bottom: 0;
+
+     }
+ }
+
+ #data-title {
+     display: flex;
+     justify-content: center;
  }
