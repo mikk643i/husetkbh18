@@ -120,7 +120,7 @@ function udlejning_1() {
     document.getElementById("udlejning_toggle_3").style.display = "none";
     document.getElementById("udlejning_toggle_4").style.display = "none";
     document.getElementById("udlejning_toggle_5").style.display = "none";
-    window.scrollTo(10, document.body.scrollHeight);
+    window.scrollTo(0, document.body.scrollHeight);
 
 }
 
