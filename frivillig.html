@@ -383,6 +383,27 @@ input[type=text]:hover {
 
 
     <script src="javascript.js"></script>
+    <script>
+     let svartekst
+        document.querySelector("form").addEventListener("submit", visData);
+
+        async function visData(e) {
+            e.preventDefault();
+            let navn = this.querySelector("#navn").value;
+            let email = this.querySelector("#email").value;
+            let besked = this.querySelector("#besked").value;
+            let url = "forms.php?navn=" + navn + "&email=" + email + "&besked=" + besked;
+            let svar = await fetch(url);
+            svartekst = await svar.text();
+            show();
+            this.querySelector("#navn").value = "";
+
+        }
+
+        function show(response) {
+            document.querySelector("#response").textContent = svartekst;
+        }
+</script>
 </body>
 
 </html>

@@ -68,12 +68,63 @@
             }
         }
 
-        @media screen and (min-width: 1500px) {
+
+          @media screen and (min-width: 750px) {
+
+.footer-container {
+                padding-top: 10px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 1px;
+                width: 70vw;
+            }
+
+            .kontaktinfo {
+                text-align: right;
+                width: 25vw;
+            }
+
+            .kontaktinfo {
+                line-height: 20px;
+            }
+
+            .aabningstider {
+                text-align: center;
+                width: 25vw;
+            }
+
+            .aabningstider a:hover {
+                color: red;
+            }
+            .links {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                width: 25vw;
+
+            }
+
+            .links a {
+                text-decoration: none;
+                margin-bottom: 10px;
+            }
+
+            .links a:hover {
+                color: red;
+            }
+
+            .site-brede {
+                margin-top: 3vw;
+                margin-left: 11.5vw;
+                width: 75.5vw;
+            }
+        }
 
 
 
 
-
+        @media screen and (min-width: 1300px) {
 
             .footer-container {
                 padding-top: 10px;
@@ -147,16 +198,16 @@
                         <li><a href="general.html">General husorden</a></li>
                         <li><a href="historie.html">Historie</a></li>
                     </ul>
-                    <li class="dropdown"><a href="kontakt.html">Kontakt</a>
-                        <ul class="dropdown-content">
-                            <li><a href="medarbejder.html">Medarbejder</a></li>
-                            <li><a href="ledig.html">Ledige stillinger</a></li>
-                            <li><a href="booker.html">Booking</a></li>
-                            <li><a href="udlejning.html">Udlejning</a></li>
-                            <li><a href="presse.html">Presse</a></li>
-                            <li><a href="Personlig-data.html">Persondata</a></li>
-                        </ul>
-                    </li>
+                <li class="dropdown"><a href="kontakt.html">Kontakt</a>
+                    <ul class="dropdown-content">
+                        <li><a href="medarbejder.html">Medarbejder</a></li>
+                        <li><a href="ledig.html">Ledige stillinger</a></li>
+                        <li><a href="booker.html">Booking</a></li>
+                        <li><a href="udlejning.html">Udlejning</a></li>
+                        <li><a href="presse.html">Presse</a></li>
+                        <li><a href="Personlig-data.html">Persondata</a></li>
+                    </ul>
+                </li>
             </ul>
 
         </nav>
@@ -255,15 +306,16 @@
                 <li>Invitation til Husets private arrangementer</li>
                 <li>Bliver en del af planlægningen af arrangementer</li>
             </div>
+            <div class="event read">
+                <div class="readmore"><a href="frivillig.html"><b>Læs mere her</b></a></div>
+            </div>
             <div class="video_frivillig">
                 <iframe src="https://www.youtube.com/embed/3SpoVyj0RRI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
     </section>
-    <div class="event read">
-        <div class="readmore"><a href="frivillig.html"><b>Læs mere her</b></a></div>
-    </div>
+
 
     <!-- Nyhedsbrev -->
     <button id="tilmeld">
@@ -463,6 +515,7 @@
 
             modal.classList.remove("vis");
         }
+
     </script>
 
 </body>
