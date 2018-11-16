@@ -24,46 +24,67 @@
 <body>
 
 
+    <div style="display:none;" id="myDiv" class="animate-bottom">
 
 
-    <div class="logo"><img src="assets/Huset_logo_9_B.png" alt="Husets logo"></div>
 
-    <div class="menu">
+        <div class="logo"><img src="assets/Huset_logo_9_B.png" alt="Husets logo"></div>
 
-        <div class="home"> <a href="index.html"><img src="/mobil/assets/home.png" alt="hjemme"></a></div>
+        <div class="menu">
 
-        <div class="events"> <a href="events.html"><img src="/mobil/assets/events.png" alt="events"></a></div>
+            <div class="home"> <a href="index.html"><img src="/mobil/assets/home.png" alt="hjemme"></a></div>
 
-        <div class="kontaktos"><a href="kontakt.html"><img src="/mobil/assets/kontakt.png" alt="kontakt"></a></div>
+            <div class="events"> <a href="events.html"><img src="/mobil/assets/events.png" alt="events"></a></div>
+
+            <div class="kontaktos"><a href="kontakt.html"><img src="/mobil/assets/kontakt.png" alt="kontakt"></a></div>
+
+            <div class="back"><a href="events.html"><img src="/mobil/assets/pil.png" alt="pil"></a></div>
+        </div>
+
+
+
+        <section class="event">
+
+            <article id="data-page">
+
+                <img class="kob-billet" src="/mobil/assets/kob-billet.png" alt="køb billet">
+                <img class="data_img" src="">
+
+                <h2 id="data-title"></h2>
+                <span class="data-genre"></span> <br> <br>
+                <span class="data-dato"></span> <br> <br>
+                <span class="data-sted"></span> <br> <br>
+                <span class="data-pris"></span> <br> <br>
+                <span class="data-lang_beskrivelse"></span>
+            </article>
+        </section>
+
+
+
+
     </div>
-
-
-
-    <section class="event">
-
-        <article id="data-page">
-
-            <img class="kob-billet" src="/mobil/assets/kob-billet.png" alt="køb billet">
-            <img class="data_img" src="">
-
-            <h2 id="data-title"></h2>
-            <span class="data-genre"></span> <br> <br>
-            <span class="data-dato"></span> <br> <br>
-            <span class="data-sted"></span> <br> <br>
-            <span class="data-pris"></span> <br> <br>
-            <span class="data-lang_beskrivelse"></span>
-        </article>
-    </section>
-
-
-
-
-
 
 
 
 
     <script>
+        let TO;
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            TO = setTimeout(showPage, 500);
+        }
+
+
+
+        function showPage() {
+            document.getElementById("myDiv").style.display = "block";
+        }
+
+
+
+
         let urlParams = new URLSearchParams(window.location.search);
         let id = urlParams.get("id");
         console.log(id)
