@@ -192,7 +192,7 @@
  }
 
  .kontaktos img {
-     width: 8vw;
+     width: 7vw;
  }
 
  @media screen and (min-width: 560px) {
@@ -288,4 +288,13 @@
  #data-title {
      display: flex;
      justify-content: center;
+ }
+
+
+ .menu-item {
+     border: none;
+     background-color: #c6e3f8;
+     height: 30px;
+     width: 72px;
+     margin-right: 10px;
  }

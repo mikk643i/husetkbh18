@@ -6,54 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /*#modal {
-            width: 100vw;
-            position: fixed;
-            background-color: rgba(0, 0, 0, 0.76);
-            text-align: center;
-            transition: all 1s;
-            opacity: 0;
-            pointer-events: none;
-            overflow: scroll;
-            transition: 1s;
-            z-index: 2;
-        }
 
-        #modal-content {
-            width: 90vw;
-            height: 80vw;
-            background-color: #f4f4f4;
-            margin: auto;
-            margin-top: 5vw;
-            padding-top: 16vw
-        }
-
-        #modal.vis {
-            opacity: 1;
-            pointer-events: all;
-            transition: 0.5s;
-            height: 1050px;
-            margin-top: -340px;
-        }
-
-        #modal img {
-            margin-left: -14vw;
-            width: 45vw;
-            transform: rotate(90deg);
-            object-fit: scale-down;
-            margin-top: -5vw;
-        }
-
-        #modal button {
-            font-size: 2em;
-            font-weight: 300;
-            margin-top: 25px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50px;
-        }*/
-    </style>
 </head>
 
 <body>
@@ -128,16 +81,16 @@
             <a href="kalender.html"><button class="menu-item">Kalender</button></a>
         </div>
 
-        <section id="modal_event">
+        <section id="modal_window_event">
 
-            <div id="modal-content">
+            <div id="modal_window_content">
                 <h2 class="modal-title"></h2>
                 <p class="modal-genre" data-genre></p>
 
                 <p class="modal-sted" data-sted></p>
                 <img class="modal-billede" src="" alt="">
                 <p class="modal-langbeskrivelse" data-lang-beskrivelse></p>
-                <p>Pris: <span class="modal-pris" data-pris></span>,- </p>
+                <p><span class="modal-pris" data-pris></span></p>
                 <span class="data-dato" data-dato></span>
             </div>
         </section>
@@ -236,7 +189,7 @@
 
 
         function visEventModal(husetevent) {
-            let modal = document.querySelector("#modal_event");
+            let modal = document.querySelector("#modal_window_event");
             modal.querySelector(".modal-title").innerHTML = husetevent.title.rendered;
             modal.querySelector(".modal-billede").src = husetevent.acf.billede;
             modal.querySelector(".modal-genre").textContent = husetevent.acf.event_type;
@@ -244,14 +197,15 @@
             modal.querySelector(".modal-sted").textContent = husetevent.acf.event_sted;
             modal.querySelector(".modal-pris").textContent = "Entre " + husetevent.acf.pris + "kr"
 
-            document.getElementById("modal_event").style.opacity = "1";
+            document.getElementById("modal_window_event").style.opacity = "1";
         }
 
         function skjulModal() {
-            visEventModal.classList.remove("vis");
+            modal.classList.remove("vis");
 
 
         }
+
     </script>
 
 </body>
