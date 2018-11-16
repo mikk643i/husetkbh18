@@ -23,7 +23,7 @@
 
 <body>
 
-    <div id="loader"></div>
+
     <div style="display:none;" id="myDiv" class="animate-bottom">
 
 
@@ -66,6 +66,7 @@
 
         document.addEventListener("DOMContentLoaded", start);
 
+
         function start() {
             TO = setTimeout(showPage, 1000);
         }
@@ -73,7 +74,7 @@
 
 
         function showPage() {
-            document.getElementById("loader").style.display = "none";
+
             document.getElementById("myDiv").style.display = "block";
         }
 
