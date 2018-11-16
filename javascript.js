@@ -120,7 +120,8 @@ function udlejning_1() {
     document.getElementById("udlejning_toggle_3").style.display = "none";
     document.getElementById("udlejning_toggle_4").style.display = "none";
     document.getElementById("udlejning_toggle_5").style.display = "none";
-    window.scrollTo(0, document.body.scrollHeight);
+    // window.scrollTo(0, document.body.scrollHeight);
+    window.scrollTo(0, 1620);
 
 }
 
@@ -136,7 +137,8 @@ function udlejning_2() {
     document.getElementById("udlejning_toggle_3").style.display = "none";
     document.getElementById("udlejning_toggle_4").style.display = "none";
     document.getElementById("udlejning_toggle_5").style.display = "none";
-    window.scrollTo(0, document.body.scrollHeight);
+    // window.scrollTo(0, document.body.scrollHeight);
+    window.scrollTo(0, 1620);
 
 }
 
@@ -152,7 +154,8 @@ function udlejning_3() {
     document.getElementById("udlejning_toggle_1").style.display = "none";
     document.getElementById("udlejning_toggle_4").style.display = "none";
     document.getElementById("udlejning_toggle_5").style.display = "none";
-    window.scrollTo(0, document.body.scrollHeight);
+    // window.scrollTo(0, document.body.scrollHeight);
+    window.scrollTo(0, 1620);
 }
 
 function udlejning_4() {
@@ -167,7 +170,8 @@ function udlejning_4() {
     document.getElementById("udlejning_toggle_3").style.display = "none";
     document.getElementById("udlejning_toggle_1").style.display = "none";
     document.getElementById("udlejning_toggle_5").style.display = "none";
-    window.scrollTo(0, document.body.scrollHeight);
+    // window.scrollTo(0, document.body.scrollHeight);
+    window.scrollTo(0, 1620);
 }
 
 function udlejning_5() {
@@ -182,5 +186,6 @@ function udlejning_5() {
     document.getElementById("udlejning_toggle_3").style.display = "none";
     document.getElementById("udlejning_toggle_4").style.display = "none";
     document.getElementById("udlejning_toggle_1").style.display = "none";
-    window.scrollTo(0, document.body.scrollHeight);
+    // window.scrollTo(0, document.body.scrollHeight);
+    window.scrollTo(0, 1620);
 }
