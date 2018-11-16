@@ -71,6 +71,20 @@
     <div class="site-brede">
         <h1>Events</h1>
     </div>
+
+    <section id="modal_window_event">
+
+        <div id="modal_window_content">
+            <h2 class="modal-title"></h2>
+            <p class="modal-genre" data-genre></p>
+
+            <p class="modal-sted" data-sted></p>
+            <img class="modal-billede" src="" alt="">
+            <p class="modal-langbeskrivelse" data-lang-beskrivelse></p>
+            <p><span class="modal-pris" data-pris></span></p>
+            <span class="data-dato" data-dato></span>
+        </div>
+    </section>
     <div class="events">
 
         <div class="filtrering">
@@ -114,7 +128,7 @@
         </template>
     </div>
 
-     <footer>
+    <footer>
         <div class="site-brede">
             <div class="footer-container">
                 <div class="links">
@@ -227,6 +241,7 @@
 
         function visEventModal(husetevent) {
             let modal = document.querySelector("#modal_window_event");
+            modal.classList.add("vis");
             modal.querySelector(".modal-title").innerHTML = husetevent.title.rendered;
             modal.querySelector(".modal-billede").src = husetevent.acf.billede;
             modal.querySelector(".modal-genre").textContent = husetevent.acf.event_type;
@@ -239,8 +254,7 @@
 
         function skjulModal() {
             modal.classList.remove("vis");
-
-
+            //window.scrollTo(0);
         }
 
     </script>
