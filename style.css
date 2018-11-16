@@ -1109,11 +1109,11 @@
               color: red;
           }
 
-          .site-brede {
+          /*.site-brede {
               margin-top: 3vw;
               margin-left: 11.5vw;
               width: 75.5vw;
-          }
+          }*/
       }
 
 
@@ -1163,11 +1163,7 @@
               color: red;
           }
 
-          .site-brede {
-              margin-top: 3vw;
-              margin-left: 11.5vw;
-              width: 75.5vw;
-          }
+
       }
 
 
@@ -1219,9 +1215,9 @@
               color: red;
           }
 
-          .site-brede {
+          footer .site-brede {
               margin-top: 3vw;
               margin-left: 11.5vw;
               width: 75.5vw;
+
           }
-      }
