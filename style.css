@@ -1055,198 +1055,204 @@
 
       /*MODAL WINDOW*/
 
- #modal_window_event {
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            background-color: rgba(0, 0, 0, .7);
-            text-align: center;
-            /*display: none;*/
-            transition: all 1s;
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        #modal_window_content {
-            width: 70vw;
-            height: 70vh;
-            background-color: rgba(250, 250, 250, 1);
-            margin: auto;
-        }
-
-        #modal_window.vis {
-            /* display: block;*/
-            opacity: 1;
-            pointer-events: all;
-
-
-
-
-
-      footer p {
-          font-size: 0.8em;
+      #modal_window_event {
+          width: 100vw;
+          height: auto;
+          position: absolute;
+          background-color: transparent;
+          text-align: center;
+          /*display: none;*/
+          transition: all 1s;
+          opacity: 0;
+          pointer-events: none;
+          z-index: 1;
       }
 
-      footer {
-          background-color: #a3c3d9;
+      #modal_window_content {
+          width: 70vw;
+          height: -50vh;
+          background-color: rgba(250, 250, 250, 1);
+          margin: auto;
+          border-radius: 20px;
       }
 
+      .modal-billede {
+          width: 700px;
+      }
 
-      @media screen and (max-width: 750px) {
+      #modal_window.vis {
+          /* display: block;*/
+          opacity: 1;
+          pointer-events: all;
 
 
-          .footer-container {
-              padding-top: 10px;
-              display: grid;
-              grid-template-columns: repeat(1, 1fr);
-              grid-gap: 1px;
-              width: 90vw;
+
+
+
+          footer p {
+              font-size: 0.8em;
           }
 
-          .kontaktinfo {
-              width: 90vw;
+          footer {
+              background-color: #a3c3d9;
           }
 
-          .kontaktinfo {
-              line-height: 20px;
-          }
 
-          .aabningstider {
+          @media screen and (max-width: 750px) {
 
-              width: 90vw;
-          }
 
-          .aabningstider a:hover {
-              color: red;
-          }
+              .footer-container {
+                  padding-top: 10px;
+                  display: grid;
+                  grid-template-columns: repeat(1, 1fr);
+                  grid-gap: 1px;
+                  width: 90vw;
+              }
 
-          .links {
-              margin-top: 10px;
-              display: flex;
-              flex-direction: column;
-              flex-wrap: nowrap;
-              width: 90vw;
+              .kontaktinfo {
+                  width: 90vw;
+              }
 
-          }
+              .kontaktinfo {
+                  line-height: 20px;
+              }
 
-          .links a {
-              text-decoration: none;
-              margin-bottom: 10px;
-          }
+              .aabningstider {
 
-          .links a:hover {
-              color: red;
-          }
+                  width: 90vw;
+              }
 
-          /*.site-brede {
+              .aabningstider a:hover {
+                  color: red;
+              }
+
+              .links {
+                  margin-top: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+                  width: 90vw;
+
+              }
+
+              .links a {
+                  text-decoration: none;
+                  margin-bottom: 10px;
+              }
+
+              .links a:hover {
+                  color: red;
+              }
+
+              /*.site-brede {
               margin-top: 3vw;
               margin-left: 11.5vw;
               width: 75.5vw;
           }*/
-      }
-
-
-      @media screen and (min-width: 750px) {
-
-          .footer-container {
-              padding-top: 10px;
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              grid-gap: 1px;
-              width: 70vw;
-          }
-
-          .kontaktinfo {
-              text-align: right;
-              width: 25vw;
-          }
-
-          .kontaktinfo {
-              line-height: 20px;
-          }
-
-          .aabningstider {
-              text-align: center;
-              width: 25vw;
-          }
-
-          .aabningstider a:hover {
-              color: red;
-          }
-
-          .links {
-              margin-top: 10px;
-              display: flex;
-              flex-direction: column;
-              flex-wrap: nowrap;
-              width: 25vw;
-
-          }
-
-          .links a {
-              text-decoration: none;
-              margin-bottom: 10px;
-          }
-
-          .links a:hover {
-              color: red;
           }
 
 
-      }
+          @media screen and (min-width: 750px) {
+
+              .footer-container {
+                  padding-top: 10px;
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  grid-gap: 1px;
+                  width: 70vw;
+              }
+
+              .kontaktinfo {
+                  text-align: right;
+                  width: 25vw;
+              }
+
+              .kontaktinfo {
+                  line-height: 20px;
+              }
+
+              .aabningstider {
+                  text-align: center;
+                  width: 25vw;
+              }
+
+              .aabningstider a:hover {
+                  color: red;
+              }
+
+              .links {
+                  margin-top: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+                  width: 25vw;
+
+              }
+
+              .links a {
+                  text-decoration: none;
+                  margin-bottom: 10px;
+              }
+
+              .links a:hover {
+                  color: red;
+              }
 
 
-
-
-      @media screen and (min-width: 1300px) {
-
-          .footer-container {
-              padding-top: 10px;
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              grid-gap: 1px;
-              width: 70vw;
           }
 
-          .kontaktinfo {
-              text-align: right;
-              width: 25vw;
-          }
 
-          .kontaktinfo {
-              line-height: 20px;
-          }
 
-          .aabningstider {
-              text-align: center;
-              width: 25vw;
-          }
 
-          .aabningstider a:hover {
-              color: red;
-          }
+          @media screen and (min-width: 1300px) {
 
-          .links {
-              margin-top: 10px;
-              display: flex;
-              flex-direction: column;
-              flex-wrap: nowrap;
-              width: 25vw;
+              .footer-container {
+                  padding-top: 10px;
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  grid-gap: 1px;
+                  width: 70vw;
+              }
 
-          }
+              .kontaktinfo {
+                  text-align: right;
+                  width: 25vw;
+              }
 
-          .links a {
-              text-decoration: none;
-              margin-bottom: 10px;
-          }
+              .kontaktinfo {
+                  line-height: 20px;
+              }
 
-          .links a:hover {
-              color: red;
-          }
+              .aabningstider {
+                  text-align: center;
+                  width: 25vw;
+              }
 
-          footer .site-brede {
-              margin-top: 3vw;
-              margin-left: 11.5vw;
-              width: 75.5vw;
+              .aabningstider a:hover {
+                  color: red;
+              }
 
-          }
+              .links {
+                  margin-top: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+                  width: 25vw;
+
+              }
+
+              .links a {
+                  text-decoration: none;
+                  margin-bottom: 10px;
+              }
+
+              .links a:hover {
+                  color: red;
+              }
+
+              footer .site-brede {
+                  margin-top: 3vw;
+                  margin-left: 11.5vw;
+                  width: 75.5vw;
+
+              }
