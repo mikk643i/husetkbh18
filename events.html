@@ -30,16 +30,16 @@
                         <li><a href="general.html">General husorden</a></li>
                         <li><a href="historie.html">Historie</a></li>
                     </ul>
-                    <li class="dropdown"><a href="kontakt.html">Kontakt</a>
-                        <ul class="dropdown-content">
-                            <li><a href="medarbejder.html">Medarbejder</a></li>
-                            <li><a href="ledig.html">Ledige stillinger</a></li>
-                            <li><a href="booker.html">Booking</a></li>
-                            <li><a href="udlejning.html">Udlejning</a></li>
-                            <li><a href="presse.html">Presse</a></li>
-                            <li><a href="Personlig-data.html">Persondata</a></li>
+                <li class="dropdown"><a href="kontakt.html">Kontakt</a>
+                    <ul class="dropdown-content">
+                        <li><a href="medarbejder.html">Medarbejder</a></li>
+                        <li><a href="ledig.html">Ledige stillinger</a></li>
+                        <li><a href="booker.html">Booking</a></li>
+                        <li><a href="udlejning.html">Udlejning</a></li>
+                        <li><a href="presse.html">Presse</a></li>
+                        <li><a href="Personlig-data.html">Persondata</a></li>
 
-                        </ul>
+                    </ul>
             </ul>
 
         </nav>
@@ -56,16 +56,16 @@
                         <li><a href="general.html">General husorden</a></li>
                         <li><a href="historie.html">Historie</a></li>
                     </ul>
-                    <li class="dropdown"><a href="kontakt.html">Kontakt</a>
-                        <ul class="dropdown-content">
-                            <li><a href="medarbejder.html">Medarbejder</a></li>
-                            <li><a href="ledig.html">Ledige stillinger</a></li>
-                            <li><a href="booker.html">Booking</a></li>
-                            <li><a href="udlejning.html">Udlejning</a></li>
-                            <li><a href="presse.html">Presse</a></li>
-                            <li><a href="Personlig-data.html">Persondata</a></li>
+                <li class="dropdown"><a href="kontakt.html">Kontakt</a>
+                    <ul class="dropdown-content">
+                        <li><a href="medarbejder.html">Medarbejder</a></li>
+                        <li><a href="ledig.html">Ledige stillinger</a></li>
+                        <li><a href="booker.html">Booking</a></li>
+                        <li><a href="udlejning.html">Udlejning</a></li>
+                        <li><a href="presse.html">Presse</a></li>
+                        <li><a href="Personlig-data.html">Persondata</a></li>
 
-                        </ul>
+                    </ul>
             </ul>
         </nav>
     </header>
@@ -93,7 +93,7 @@
             <button class="menu-item" data-genre="Film">Film</button>
             <button class="menu-item" data-genre="Teater">Teater</button>
             <button class="menu-item" data-genre="Musik">Musik</button>
-            <a href="kalender.html"><button class="menu-item">Kalender</button></a>
+
         </div>
 
         <section id="modal_window_event">
@@ -161,7 +161,7 @@
                         <br>1466 København K
                         <br>Tlf: 21 51 21 51
                         <br>info@huset-kbh.dk</p>
-                        <a href="https://www.facebook.com/Huset.Koebenhavn/" class="fa fa-facebook"></a>
+                    <a href="https://www.facebook.com/Huset.Koebenhavn/" class="fa fa-facebook"></a>
                     <a href="https://twitter.com/husetkbh?lang=da" class="fa fa-twitter"></a>
                     <a href="https://www.instagram.com/husetkbh/?hl=da" class="fa fa-instagram"></a>
                     <a href="https://www.flickr.com/search/?text=huset-kbh" class="fa fa-flickr"></a>
@@ -172,8 +172,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="javascript.js"></script>
     <script>
-        /*Globale variabler*/
-
         let minTemplate = document.querySelector("#wp_template");
         let templateModtager = document.querySelector(".event");
         let husetEvents;
@@ -213,12 +211,6 @@
                 if (eventFilter == "Alle" || eventFilter == husetevent.acf.event_type) {
 
                     let klon = minTemplate.cloneNode("true").content;
-                    /*klon.querySelector("img").src = husetevent.acf.billede;
-                    klon.querySelector("img").addEventListener("click", () => {
-                    visModal(husetevent);
-                    });*/
-
-
                     klon.querySelector("#data-title").innerHTML = husetevent.title.rendered;
                     klon.querySelector(".data-genre").textContent = husetevent.acf.event_type;
                     klon.querySelector(".data_img").src = husetevent.acf.billede;
@@ -238,12 +230,6 @@
             })
         }
 
-
-
-
-
-
-
         function visEventModal(husetevent) {
             let modal = document.querySelector("#modal_window_event");
             modal.classList.add("vis");
@@ -259,7 +245,7 @@
 
         function skjulModal() {
             modal.classList.remove("vis");
-            //window.scrollTo(0);
+
         }
     </script>
 
