@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historie</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -416,8 +417,8 @@
                 her på
                 <a href="https://soundcloud.com/user-351898678/sets/kunsten-lydvandring-gennem">SoundCloud</a>.
         </div>
-
-         <footer>
+    </div>
+    <footer>
         <div class="site-brede">
             <div class="footer-container">
                 <div class="links">
@@ -449,40 +450,44 @@
                         <br>1466 København K
                         <br>Tlf: 21 51 21 51
                         <br>info@huset-kbh.dk</p>
+                    <a href="https://www.facebook.com/Huset.Koebenhavn/" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/husetkbh?lang=da" class="fa fa-twitter"></a>
+                    <a href="https://www.instagram.com/husetkbh/?hl=da" class="fa fa-instagram"></a>
+                    <a href="https://www.flickr.com/search/?text=huset-kbh" class="fa fa-flickr"></a>
                 </div>
             </div>
         </div>
     </footer>
 
 
-        <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-        <script src="javascript.js">
-            /* Check the location of each element */
-            $('.content').each(function (i) {
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src="javascript.js">
+        /* Check the location of each element */
+        $('.content').each(function(i) {
+
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).height();
+
+            if (bottom_of_object > bottom_of_window) {
+                $(this).addClass('hidden');
+            }
+        });
+        $(window).scroll(function() {
+            /* Check the location of each element hidden */
+            $('.hidden').each(function(i) {
 
                 var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-                var bottom_of_window = $(window).height();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-                if (bottom_of_object > bottom_of_window) {
-                    $(this).addClass('hidden');
+                /* If the object is completely visible in the window, fadeIn it */
+                if (bottom_of_window > bottom_of_object) {
+                    $(this).animate({
+                        'opacity': '1'
+                    }, 700);
                 }
             });
-            $(window).scroll(function () {
-                /* Check the location of each element hidden */
-                $('.hidden').each(function (i) {
-
-                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-                    var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-                    /* If the object is completely visible in the window, fadeIn it */
-                    if (bottom_of_window > bottom_of_object) {
-                        $(this).animate({
-                            'opacity': '1'
-                        }, 700);
-                    }
-                });
-            });
-        </script>
+        });
+    </script>
 </body>
 
 </html>
