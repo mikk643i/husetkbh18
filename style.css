@@ -1080,27 +1080,72 @@
 
 
       /*MODAL WINDOW*/
-      footer p {
-          font-size: 0.8em;
+
+      #modal_window_event {
+          width: 100vw;
+          height: auto;
+          position: absolute;
+          background-color: transparent;
+          text-align: center;
+          /*display: none;*/
+          transition: all 1s;
+          opacity: 0;
+          pointer-events: none;
+          z-index: 1;
       }
 
-      footer {
-          background-color: #a3c3d9;
+      #modal_window_content {
+          width: 70vw;
+          height: -50vh;
+          background-color: rgba(250, 250, 250, 1);
+          margin: auto;
+          border-radius: 20px;
+      }
+
+      .modal-billede {
+          width: 700px;
+      }
+
+      #modal_window.vis {
+          /* display: block;*/
+          opacity: 1;
+          pointer-events: all;
+
+
+
+
+
+
       }
 
 
       @media screen and (max-width: 750px) {
 
+          footer p {
+              font-size: 0.8em;
+          }
 
+          footer {
+              background-color: #a3c3d9;
+          }
+
+          .links {
+              font-weight: 600;
+              margin-top: 10px;
+              display: flex;
+              flex-direction: column;
+              flex-wrap: nowrap;
+              width: 90vw;
+          }
 
           .footer-container {
               padding-top: 10px;
               display: grid;
               grid-template-columns: repeat(1, 1fr);
               grid-gap: 1px;
-              width: 100vw;
-              padding: 10px;
+              width: 90vw;
           }
+
 
           .kontaktinfo {
               width: 90vw;
@@ -1120,7 +1165,6 @@
           }
 
           .links {
-              font-weight: 600;
               margin-top: 10px;
               display: flex;
               flex-direction: column;
@@ -1138,11 +1182,7 @@
               color: red;
           }
 
-          /*.site-brede {
-              margin-top: 3vw;
-              margin-left: 11.5vw;
-              width: 75.5vw;
-          }*/
+
       }
 
 
