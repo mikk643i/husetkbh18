@@ -86,6 +86,10 @@
           font-weight: 600;
       }
 
+      .kontaktinfo a:hover {
+          color: red;
+      }
+
 
       @media screen and (max-width: 750px) {
 
@@ -1155,11 +1159,10 @@
 
           .kontaktinfo {
               width: 90vw;
-          }
-
-          .kontaktinfo {
               line-height: 20px;
           }
+
+
 
           .aabningstider {
 
