@@ -627,7 +627,7 @@
               width: 80vw;
           }
 
-          #data-page {
+          .data-page {
               text-align: center;
               width: 80vw;
               background-color: #c6e3f8;
@@ -678,7 +678,7 @@
               width: 26vw;
           }
 
-          #data-page {
+          .data-page {
               text-align: center;
               width: 26vw;
               background-color: #c6e3f8;
@@ -735,7 +735,7 @@
               width: 23.2vw;
           }
 
-          #data-page {
+          .data-page {
               text-align: center;
               width: 23.2vw;
               background-color: #c6e3f8;

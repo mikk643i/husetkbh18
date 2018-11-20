@@ -89,11 +89,11 @@
     </section>
     <template id="wp_template">
 
-        <article id="data-page">
+        <article class="data-page">
 
             <img class="kob-billet" src="mobil/assets/kob-billet.png" alt="køb billet her til diverse oplevelser">
             <img class="data_img" src="" alt="">
-            <h2 id="data-title"></h2>
+            <h2 class="data-title"></h2>
             <div class""></div>
             <p class="data-genre"></p>
             <p class="data-dato"></p>
@@ -144,7 +144,7 @@
             </div>
 
             <div class="video_frivillig">
-                <iframe src="https://www.youtube.com/embed/3SpoVyj0RRI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>En lille vidoe om af være frivillig i huset</iframe>
+                <iframe src="https://www.youtube.com/embed/3SpoVyj0RRI" title="iframe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -168,8 +168,8 @@
                 <h1>Læs vores nyhedsbrev!</h1>
                 <p>Vores nyhedsbrev indeholder information omkring kommende begivender og sammenkomster i Huset, der
                     vil også være hyppige konkurrencer og andet tilbud kun modtagere af nyhedsbrevet vil modtage. </p>
-                <input id="navn" type="text" name="navn" placeholder="Navn" required>
-                <input id="email" type="text" name="email" placeholder="E-mail" required><br>
+                <input id="navn" type="text" name="navn" placeholder="Navn" required="">
+                <input id="email" type="text" name="email" placeholder="E-mail" required=""><br>
 
                 <p> Ved at klikke send, erklærer du dig enig med vores politik om persondata <a href="https://huset-kbh.dk/kontakt-huset-kbh-kontakt-huset/persondata/">læs
                         om det her</a> </p>
@@ -274,7 +274,7 @@
                     });*/
 
 
-                    klon.querySelector("#data-title").innerHTML = husetevent.title.rendered;
+                    klon.querySelector(".data-title").innerHTML = husetevent.title.rendered;
                     klon.querySelector(".data-genre").textContent = husetevent.acf.event_type;
                     klon.querySelector(".data_img").src = husetevent.acf.billede;
 
