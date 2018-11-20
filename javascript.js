@@ -36,7 +36,7 @@ function frivillig_1() {
     document.getElementById("frivillig_toggle_3").style.display = "none";
     document.getElementById("frivillig_toggle_4").style.display = "none";
     document.getElementById("frivillig_toggle_5").style.display = "none";
-    window.scrollTo(0, document.body.scrollHeight);
+    window.scrollTo(0, 1620);
 
 }
 
@@ -52,7 +52,7 @@ function frivillig_2() {
     document.getElementById("frivillig_toggle_3").style.display = "none";
     document.getElementById("frivillig_toggle_4").style.display = "none";
     document.getElementById("frivillig_toggle_5").style.display = "none";
-    window.scrollTo(0, document.body.scrollHeight);
+    window.scrollTo(0, 1620);
 
 }
 
@@ -68,7 +68,7 @@ function frivillig_3() {
     document.getElementById("frivillig_toggle_2").style.display = "none";
     document.getElementById("frivillig_toggle_4").style.display = "none";
     document.getElementById("frivillig_toggle_5").style.display = "none";
-    window.scrollTo(0, document.body.scrollHeight);
+    window.scrollTo(0, 1620);
 }
 
 function frivillig_4() {
@@ -83,7 +83,7 @@ function frivillig_4() {
     document.getElementById("frivillig_toggle_2").style.display = "none";
     document.getElementById("frivillig_toggle_3").style.display = "none";
     document.getElementById("frivillig_toggle_5").style.display = "none";
-    window.scrollTo(0, document.body.scrollHeight);
+    window.scrollTo(0, 1620);
 }
 
 function frivillig_5() {
@@ -98,7 +98,7 @@ function frivillig_5() {
     document.getElementById("frivillig_toggle_2").style.display = "none";
     document.getElementById("frivillig_toggle_3").style.display = "none";
     document.getElementById("frivillig_toggle_4").style.display = "none";
-    window.scrollTo(0, document.body.scrollHeight);
+    window.scrollTo(0, 1620);
 }
 
 
