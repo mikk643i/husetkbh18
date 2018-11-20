@@ -117,10 +117,10 @@
         </section>
         <template id="wp_template">
 
-            <article id="data-page">
+            <article class="data-page">
                 <img class="kob-billet" src="mobil/assets/kob-billet.png" alt="køb billet her til diverse oplevelser">
                 <img class="data_img" src="">
-                <h2 id="data-title"></h2>
+                <h2 class="data-title"></h2>
                 <div class""></div>
                 <p class="data-genre"></p>
                 <p class="data-dato"></p>
@@ -216,7 +216,7 @@
                 if (eventFilter == "Alle" || eventFilter == husetevent.acf.event_type) {
 
                     let klon = minTemplate.cloneNode("true").content;
-                    klon.querySelector("#data-title").innerHTML = husetevent.title.rendered;
+                    klon.querySelector(".data-title").innerHTML = husetevent.title.rendered;
                     klon.querySelector(".data-genre").textContent = husetevent.acf.event_type;
                     klon.querySelector(".data_img").src = husetevent.acf.billede;
                     klon.querySelector(".data_img").addEventListener("click", () => {
