@@ -613,6 +613,7 @@
               height: 30px;
               width: 70px;
               margin-right: 10px;
+
           }
 
           .animate-bottom {
@@ -1364,6 +1365,11 @@
               transform: scale(1.1);
           }
 
-          .menu-item button:hover {
+          .menu-item:hover {
               color: #a3c3d9;
+              text-decoration-color: white;
+          }
+
+          .menu-item {
+              cursor: pointer;
           }
