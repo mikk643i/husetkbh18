@@ -253,6 +253,7 @@
       .dropdown:hover .dropdown-content {
           display: block;
           border-radius: 5px;
+          background-color: #c6e3f8;
       }
 
 
@@ -649,6 +650,7 @@
               margin-top: 20px;
               font-family: 'Avenir-Black';
               border-radius: 5px;
+              cursor: pointer;
           }
 
           .event {
@@ -702,6 +704,7 @@
               margin-top: 20px;
               font-family: 'Avenir-Black';
               border-radius: 5px;
+              cursor: pointer;
           }
 
           .event {
@@ -761,6 +764,7 @@
               margin-top: 5px;
               font-family: 'Avenir-Black';
               border-radius: 5px;
+              cursor: pointer;
           }
 
           .kob-billet {
@@ -1350,4 +1354,14 @@
               width: 75.5vw;
               border-radius: 5px;
 
+          }
+
+          .data-page:hover {
+              transform: scale(1.5);
+              transform: scale(1.5);
+              transform: scale(1.5);
+          }
+
+          .menu-item button:hover {
+              color: #a3c3d9;
           }
