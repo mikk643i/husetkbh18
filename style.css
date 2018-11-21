@@ -751,11 +751,29 @@
           }
       }
 
+      @media screen and (min-width: 1280px) {
+
+          nav.normal {
+              display: flex;
+              flex-wrap: nowrap;
+              padding-left: 20vw;
+              /*
+              margin-right: 130px;
+              margin-top: 50px;
+              padding-right: 10px;
+*/
+
+          }
+
+
+
+      }
+
 
       /* Nyhedsbrev */
 
       #tilmeld {
-          font-family: Avenir-Black;
+          font-family: 'Avenir-Black';
           background-color: #ffffff;
           width: 18vh;
           height: auto;
@@ -772,7 +790,7 @@
       #tilmeld p {
           color: black;
           font-weight: bold;
-          font-family: Avenir-Black;
+          font-family: 'Avenir-Black';
       }
 
 
@@ -913,9 +931,18 @@
           }
       }
 
+      @media screen and (min-width: 1280px) {
+          #modal {
+              width: 30vw;
+              height: 70vh;
+              right: 2vw;
+              top: 10.5vw;
+          }
+      }
+
       .timeline {
           color: #fff;
-          font-family: Avenir-Black;
+          font-family: 'Avenir-Black';
       }
 
       .timeline h1,
