@@ -80,6 +80,7 @@
 
       footer {
           background-color: #c6e3f8;
+          border-radius: 5px;
       }
 
       .links {
@@ -94,7 +95,8 @@
       @media screen and (max-width: 750px) {
 
           .frivilligbox {
-              width: 90vw
+              width: 90vw;
+              border-radius: 5px;
           }
 
           .txt_frivillig {
@@ -103,6 +105,7 @@
               margin-right: 10px;
               width: 85vw;
               background-color: #c6e3f8;
+              border-radius: 5px;
           }
 
           .readmore a {
@@ -139,7 +142,8 @@
               position: relative;
               z-index: 10;
               margin-left: 300px;
-              margin-top: -30px
+              margin-top: -30px;
+              border-radius: 5px;
           }
 
           .bar {
@@ -248,6 +252,7 @@
 
       .dropdown:hover .dropdown-content {
           display: block;
+          border-radius: 5px;
       }
 
 
@@ -257,6 +262,7 @@
               display: grid;
               grid-template-columns: repeat(1, 1fr);
               width: 90vw;
+              border-radius: 5px;
           }
 
           .txt_frivillig {
@@ -264,6 +270,7 @@
               padding: 30px;
               background-color: #c6e3f8;
               width: 73vw;
+              border-radius: 5px;
           }
 
           iframe {
@@ -339,6 +346,7 @@
 
           .normal a:hover {
               background-color: #a3c3d9;
+              border-radius: 5px;
 
           }
 
@@ -376,6 +384,7 @@
               display: grid;
               grid-template-columns: repeat(2, 1fr);
               width: 90vw;
+              border-radius: 5px;
           }
 
           .txt_frivillig {
@@ -383,6 +392,7 @@
               padding: 30px;
               background-color: #c6e3f8;
               width: 35vw;
+              border-radius: 5px;
           }
 
           .readmore a {
@@ -480,6 +490,7 @@
               display: grid;
               grid-template-columns: repeat(2, 1fr);
               width: 90vw;
+              border-radius: 5px;
           }
 
           .txt_frivillig {
@@ -487,6 +498,7 @@
               padding: 30px;
               background-color: #c6e3f8;
               width: 35vw;
+              border-radius: 5px;
           }
 
           iframe {
@@ -522,6 +534,7 @@
               display: grid;
               grid-template-columns: repeat(2, 1fr);
               width: 90vw;
+              border-radius: 5px;
           }
 
 
@@ -531,6 +544,7 @@
               padding: 30px;
               background-color: #c6e3f8;
               width: 35vw;
+              border-radius: 5px;
           }
 
           .readmore a {
@@ -633,7 +647,8 @@
               background-color: #c6e3f8;
               padding: 10px;
               margin-top: 20px;
-              font-family: Avenir-Black;
+              font-family: 'Avenir-Black';
+              border-radius: 5px;
           }
 
           .event {
@@ -672,6 +687,7 @@
               height: 30px;
               width: 70px;
               margin-right: 10px;
+              border-radius: 5px;
           }
 
           .data_img {
@@ -684,7 +700,8 @@
               background-color: #c6e3f8;
               padding: 10px;
               margin-top: 20px;
-              font-family: Avenir-Black;
+              font-family: 'Avenir-Black';
+              border-radius: 5px;
           }
 
           .event {
@@ -718,6 +735,7 @@
               height: 30px;
               width: 100px;
               margin-right: 10px;
+              border-radius: 5px;
           }
 
 
@@ -741,7 +759,8 @@
               background-color: #c6e3f8;
               padding: 10px;
               margin-top: 5px;
-              font-family: Avenir-Black;
+              font-family: 'Avenir-Black';
+              border-radius: 5px;
           }
 
           .kob-billet {
@@ -1112,6 +1131,7 @@
       .minimenu-container img:hover {
           opacity: 0.5;
           transform: scale(1.05);
+          border-radius: 5px;
 
       }
 
@@ -1164,6 +1184,7 @@
 
           footer {
               background-color: #a3c3d9;
+              border-radius: 5px;
           }
 
           .links {
@@ -1266,6 +1287,7 @@
 
           .links a:hover {
               color: red;
+              border-radius: 5px;
           }
 
 
@@ -1282,6 +1304,7 @@
               grid-template-columns: repeat(3, 1fr);
               grid-gap: 1px;
               width: 70vw;
+              border-radius: 5px;
           }
 
           .kontaktinfo {
@@ -1318,11 +1341,13 @@
 
           .links a:hover {
               color: red;
+              border-radius: 5px;
           }
 
           footer .site-brede {
               margin-top: 3vw;
               margin-left: 11.5vw;
               width: 75.5vw;
+              border-radius: 5px;
 
           }
