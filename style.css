@@ -789,12 +789,9 @@
               margin-right: 130px;
               margin-top: 50px;
               padding-right: 10px;
-<<<<<<< HEAD
 
 
-=======
-*/
->>>>>>> origin/master
+
           }
 
 
@@ -1372,10 +1369,9 @@
               transform: scale(1.1);
           }
 
-<<<<<<< HEAD
-          .menu-item button:hover {
-              background-color: #a3c3d9;
-=======
+
+
+
           .menu-item:hover {
               color: #a3c3d9;
               text-decoration-color: white;
@@ -1383,5 +1379,5 @@
 
           .menu-item {
               cursor: pointer;
->>>>>>> origin/master
+
           }
