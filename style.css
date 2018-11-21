@@ -774,23 +774,25 @@
           }
       }
 
+      /*
       @media screen and (min-width: 1280px) {
 
           nav.normal {
               display: flex;
               flex-wrap: nowrap;
               padding-left: 15vw;
-              /*
+
               margin-right: 130px;
               margin-top: 50px;
               padding-right: 10px;
-*/
+
 
           }
 
 
 
       }
+*/
 
 
       /* Nyhedsbrev */
@@ -1363,5 +1365,5 @@
           }
 
           .menu-item button:hover {
-              color: #a3c3d9;
+              background-color: #a3c3d9;
           }
