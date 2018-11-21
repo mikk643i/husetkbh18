@@ -651,6 +651,7 @@
               font-family: 'Avenir-Black';
               border-radius: 5px;
               cursor: pointer;
+              transition: 1s;
           }
 
           .event {
@@ -705,6 +706,7 @@
               font-family: 'Avenir-Black';
               border-radius: 5px;
               cursor: pointer;
+              transition: 1s;
           }
 
           .event {
@@ -765,6 +767,7 @@
               font-family: 'Avenir-Black';
               border-radius: 5px;
               cursor: pointer;
+              transition: 1s;
           }
 
           .kob-billet {
@@ -785,7 +788,6 @@
               margin-top: 50px;
               padding-right: 10px;
 */
-
           }
 
 
@@ -1356,10 +1358,10 @@
 
           }
 
+
           .data-page:hover {
-              transform: scale(1.5);
-              transform: scale(1.5);
-              transform: scale(1.5);
+              z-index: 2;
+              transform: scale(1.1);
           }
 
           .menu-item button:hover {
