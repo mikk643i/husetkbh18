@@ -12,6 +12,20 @@
 </head>
 
 <body>
+    <section id="modal_window_event">
+
+        <div id="modal_window_content">
+            <button id="closeEvent">Close</button>
+            <h2 class="modal-title"></h2>
+            <p class="modal-genre" data-genre></p>
+
+            <p class="modal-sted" data-sted></p>
+            <img class="modal-billede" src="" alt="">
+            <p class="modal-langbeskrivelse" data-lang-beskrivelse></p>
+            <p><span class="modal-pris" data-pris></span></p>
+            <span class="data-dato" data-dato></span>
+        </div>
+    </section>
     <header>
         <a href="index.html"><img src="mobil/assets/Huset_logo_9_B.png" alt="husets logo som ligner neon skrift"></a>
         <div class="menubutton">
@@ -74,19 +88,7 @@
         <h1>Events</h1>
     </div>
 
-    <section id="modal_window_event">
-        <button>Close</button>
-        <div id="modal_window_content">
-            <h2 class="modal-title"></h2>
-            <p class="modal-genre" data-genre></p>
 
-            <p class="modal-sted" data-sted></p>
-            <img class="modal-billede" src="" alt="">
-            <p class="modal-langbeskrivelse" data-lang-beskrivelse></p>
-            <p><span class="modal-pris" data-pris></span></p>
-            <span class="data-dato" data-dato></span>
-        </div>
-    </section>
     <div class="events">
 
         <div class="filtrering">
@@ -97,19 +99,7 @@
 
         </div>
 
-        <section id="modal_window_event">
 
-            <div id="modal_window_content">
-                <h2 class="modal-title"></h2>
-                <p class="modal-genre" data-genre></p>
-
-                <p class="modal-sted" data-sted></p>
-                <img class="modal-billede" src="" alt="">
-                <p class="modal-langbeskrivelse" data-lang-beskrivelse></p>
-                <p><span class="modal-pris" data-pris></span></p>
-                <span class="data-dato" data-dato></span>
-            </div>
-        </section>
 
 
 
@@ -182,6 +172,7 @@
         let husetEvents;
         let eventFilter = "Alle"
         let dest = document.querySelector(".event");
+        let modal = document.querySelector("#modal_window_event");
 
         /* Filtrering af events */
 
@@ -237,8 +228,10 @@
         }
 
         function visEventModal(husetevent) {
-            let modal = document.querySelector("#modal_window_event");
+
+
             modal.classList.add("vis");
+            modal.querySelector("#closeEvent").addEventListener("click", skjulModal);
             modal.querySelector(".modal-title").innerHTML = husetevent.title.rendered;
             modal.querySelector(".modal-billede").src = husetevent.acf.billede;
             modal.querySelector(".modal-genre").textContent = husetevent.acf.event_type;
@@ -246,7 +239,7 @@
             modal.querySelector(".modal-sted").textContent = husetevent.acf.event_sted;
             modal.querySelector(".modal-pris").textContent = "Entre " + husetevent.acf.pris + "kr"
 
-            document.getElementById("modal_window_event").style.opacity = "1";
+          /*document.getElementById("modal_window_event").style.opacity = "1";*/
         }
 
         function skjulModal() {

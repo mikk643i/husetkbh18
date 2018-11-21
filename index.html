@@ -14,6 +14,23 @@
 </head>
 
 <body>
+
+
+    <section id="modal_window_event">
+
+        <div id="modal_window_content">
+            <button id="closeEvent">Close</button>
+            <h2 class="modal-title"></h2>
+            <p class="modal-genre" data-genre></p>
+
+            <p class="modal-sted" data-sted></p>
+            <img class="modal-billede" src="" alt="">
+            <p class="modal-langbeskrivelse" data-lang-beskrivelse></p>
+            <p><span class="modal-pris" data-pris></span></p>
+            <span class="data-dato" data-dato></span>
+        </div>
+    </section>
+
     <header>
         <a href="index.html"><img src="mobil/assets/Huset_logo_9_B.png" alt="husets logo som ligner neon skrift"></a>
         <div class="menubutton">
@@ -103,19 +120,7 @@
     </template>
 
 
-    <section id="modal_window_event">
 
-        <div id="modal_window_content">
-            <h2 class="modal-title"></h2>
-            <p class="modal-genre" data-genre></p>
-
-            <p class="modal-sted" data-sted></p>
-            <img class="modal-billede" src="" alt="">
-            <p class="modal-langbeskrivelse" data-lang-beskrivelse></p>
-            <p><span class="modal-pris" data-pris></span></p>
-            <span class="data-dato" data-dato></span>
-        </div>
-    </section>
 
     <div class="read">
         <div class="readmore"><a href="events.html"><b>Se alle events her</b></a></div>
@@ -232,6 +237,7 @@
         let husetEvents;
         let eventFilter = "Alle"
         let dest = document.querySelector(".event");
+        let modalevent = document.querySelector("#modal_window_event");
 
         /* Filtrering af events */
 
@@ -295,20 +301,22 @@
         }
 
         function visEventModal(husetevent) {
-            let modal = document.querySelector("#modal_window_event");
-            modal.querySelector(".modal-title").innerHTML = husetevent.title.rendered;
-            modal.querySelector(".modal-billede").src = husetevent.acf.billede;
-            modal.querySelector(".modal-genre").textContent = husetevent.acf.event_type;
-            modal.querySelector(".modal-langbeskrivelse").textContent = husetevent.acf.lang_beskrivelse;
-            modal.querySelector(".modal-sted").textContent = husetevent.acf.event_sted;
-            modal.querySelector(".modal-pris").textContent = "Entre " + husetevent.acf.pris + "kr"
 
-            document.getElementById("modal_window_event").style.opacity = "1";
+
+            modalevent.classList.add("vis");
+            modalevent.querySelector("#closeEvent").addEventListener("click", skjulModalevent);
+            modalevent.querySelector(".modal-title").innerHTML = husetevent.title.rendered;
+            modalevent.querySelector(".modal-billede").src = husetevent.acf.billede;
+            modalevent.querySelector(".modal-genre").textContent = husetevent.acf.event_type;
+            modalevent.querySelector(".modal-langbeskrivelse").textContent = husetevent.acf.lang_beskrivelse;
+            modalevent.querySelector(".modal-sted").textContent = husetevent.acf.event_sted;
+            modalevent.querySelector(".modal-pris").textContent = "Entre " + husetevent.acf.pris + "kr"
+
+            /*document.getElementById("modal_window_event").style.opacity = "1";*/
         }
 
-        function skjulModal() {
-            modal.classList.remove("vis");
-
+        function skjulModalevent() {
+            modalevent.classList.remove("vis");
 
         }
 
@@ -359,7 +367,6 @@
 
             modal.classList.remove("vis");
         }
-
     </script>
 
 </body>
